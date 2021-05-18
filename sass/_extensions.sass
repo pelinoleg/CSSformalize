@@ -1,0 +1,51 @@
+// Mixin Dark Mode
+@mixin dark() 
+  @media (prefers-color-scheme: dark) 
+    @at-root #{selector-nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} 
+      @content
+    
+  
+  @at-root #{selector-nest(':root[data-theme=dark]', &)}
+    @content
+
+  
+// Cumstom Scroll
+.custom-scroll  
+  &::-webkit-scrollbar
+    background:  hsl(var(--gray-h), calc(var(--gray-s) - 100%), calc(var(--gray-l) - 20%))
+    width: 8px
+    position: relative
+    @include dark
+      background: hsl(var(--gray-h), calc(var(--gray-s) - 100%), calc(var(--gray-l) - 92%))
+  &::-webkit-scrollbar-thumb
+    background: hsl(var(--gray-h), calc(var(--gray-s) - 100%), calc(var(--gray-l) - 70%))
+    border-radius: 50em
+    @include dark
+      background: hsl(var(--gray-h), calc(var(--gray-s) - 100%), calc(var(--gray-l) - 75%))
+
+
+
+// Colors
+\:root
+  --gray-h: 218
+  --gray-s: 10%
+  --gray-l: 110%
+
+  
+  --red-s: 49%
+  --red-l: 58%
+
+  --form-color: #6cb846
+
+  --form-color-invalid: hsl(0, var(--red-s), var(--red-l)) 
+  --form-color-invalid-d: hsl(0, calc(var(--red-s) + 20%), calc(var(--red-l) + 10%))  
+
+
+
+$gr: 3,5,7,10,12,15,20,25,30,35,40,45,50,55,60,65,70,75,80,82,85,90,95
+@each $pr in $gr
+	\:root
+    --gray-#{$pr}:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) - #{$pr}%))
+
+
+

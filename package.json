@@ -1,0 +1,40 @@
+{
+	"name": "compage",
+	"version": "1.0.0",
+	"description": "Custom Css Forms",
+	"main": "index.js",
+	"dependencies": {
+		"gulp": "^4.0.2",
+		"gulp-css-variables": "^1.0.1",
+		"postcss-css-variables": "^0.17.0",
+		"stylis-plugin-css-variables": "^1.0.7"
+	},
+	"devDependencies": {
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-combine-media-queries": "^0.2.0",
+		"gulp-postcss": "^9.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-v4": "^4.0.0-alpha.5",
+		"node-sass": "^5.0.0",
+		"postcss": "^8.2.13",
+		"postcss-combine-media-query": "^1.0.1"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Pelin Oleg",
+	"license": "ISC",
+	"browserslist": [
+		"> 1%",
+		"ie >= 8",
+		"edge >= 15",
+		"ie_mob >= 10",
+		"ff >= 45",
+		"chrome >= 45",
+		"safari >= 7",
+		"opera >= 23",
+		"ios >= 7",
+		"android >= 4",
+		"bb >= 10"
+	]
+}
