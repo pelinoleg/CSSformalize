@@ -241,6 +241,10 @@ textarea {
   min-height: 150px  !important;
 }
 
+:root {
+  --check_width: 20px;
+}
+
 [type='text'],
 [type='email'],
 [type='url'],
@@ -734,10 +738,6 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
-}
-
-:root {
-  --check_width: 20px;
 }
 
 [type="checkbox"],
@@ -1378,15 +1378,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 @media (any-pointer: coarse) {
-  .switch {
-    --switch-width: 24px;
-  }
-  .switch-small {
-    --switch-width: 20px;
-  }
-  .switch-big {
-    --switch-width: 30px;
-  }
   [type='text'],
   [type='email'],
   [type='url'],
@@ -1413,9 +1404,42 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-left: 0;
     line-height: 18px;
   }
+  input[type="color"] {
+    height: 45px;
+    width: 75px;
+  }
+  input[type="text"].transparent {
+    line-hight: inherit;
+  }
+  textarea {
+    line-height: 22px;
+  }
   [type="checkbox"],
   [type="radio"] {
-    width: 26px;
-    height: 26px;
+    width: calc(var(--check_width) + 4px);
+    height: calc(var(--check_width) + 4px);
+  }
+  .switch {
+    --switch-width: 24px;
+  }
+  .switch-small {
+    --switch-width: 20px;
+  }
+  .switch-big {
+    --switch-width: 30px;
+  }
+  .radio label input {
+    left: 4px;
+  }
+  .radio span {
+    height: calc(var(--check_width) + 12px);
+    padding-left: calc(var(--check_width) + 16px);
+  }
+  .checkbox label input {
+    left: 4px;
+  }
+  .checkbox span {
+    height: calc(var(--check_width) + 12px);
+    padding-left: calc(var(--check_width) + 16px);
   }
 }

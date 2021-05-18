@@ -8,7 +8,11 @@
   @at-root #{selector-nest(':root[data-theme=dark]', &)}
     @content
 
-  
+// For Touch interfaces
+@mixin coarse()
+  @media (any-pointer: coarse)    
+    @content
+
 // Cumstom Scroll
 .custom-scroll  
   &::-webkit-scrollbar

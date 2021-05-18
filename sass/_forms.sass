@@ -74,7 +74,8 @@ textarea
 // Demo End
 
 
-
+\:root
+  --check_width: 20px  
 
 $form-round: 4px
 
@@ -148,7 +149,11 @@ select
       box-shadow: unset
       &::placeholder
         color: var(--form-color-invalid-d)
-     
+  @include coarse
+    line-height: 36px
+    padding-left: 15px
+    padding-right: 15px
+    font-size: 16px
       
 textarea,
 select[multiple]  
@@ -174,6 +179,7 @@ select[multiple]
     @include dark
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 20 20' fill='%23ccc'%3E%3Cpath fill-rule='evenodd' d='M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z' clip-rule='evenodd' /%3E%3C/svg%3E")
       background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 26 26'  xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ccc' fill-rule='evenodd' %3E%3Cpath d='m19.279476.72052402c.3979344.39793442.3979344 1.04311361 0 1.44104803l-17.11790395 17.11790395c-.39793442.3979344-1.04311361.3979344-1.44104803 0-.39793443-.3979344-.39793443-1.0431136 0-1.4410481l17.11790388-17.11790388c.3979345-.39793443 1.0431137-.39793443 1.4410481 0z'/%3E%3Cpath d='m19.2873904 8.33948184c.3979345.39793442.3979345 1.04311361 0 1.44104803l-9.47598251 9.47598253c-.39793443.3979344-1.04311361.3979344-1.44104803 0-.39793443-.3979344-.39793443-1.0431136 0-1.441048l9.47598254-9.47598256c.3979344-.39793443 1.0431136-.39793443 1.441048 0z'/%3E%3C/g%3E%3C/svg%3E")
+ 
     
 [type="file"]
   background: none
@@ -200,9 +206,11 @@ select[multiple]
       background-color: var(--gray-80)
       border-color: var(--gray-75)
       color: var(--gray-40)
-    
   &:hover
     filter: brightness(0.95)
+  @include coarse
+    padding-left: 0  
+    line-height: 18px  
 
 input[type="color"]  
   background-color: var(--gray-20)
@@ -225,6 +233,9 @@ input[type="color"]
       border-color: var(--gray-75)
     &:focus
       border-color: var(--form-color) 
+  @include coarse
+    height: 45px
+    width: 75px 
 
 input[type="range"]  
   &::-webkit-slider-runnable-track
@@ -244,6 +255,8 @@ input[type="text"].transparent
   display: inline-flex
   &:focus
     box-shadow: unset !important
+  @include coarse
+    line-hight: inherit
 
 [type=date]::-webkit-datetime-edit,
 [type=datetime-local]::-webkit-datetime-edit,
@@ -302,6 +315,8 @@ select[multiple]
 textarea
   resize: vertical
   min-height: 3rem
+  @include coarse
+    line-height: 22px
   
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -309,8 +324,7 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration
   display: none
 
-\:root
-  --check_width: 20px
+
 
 [type="checkbox"],
 [type="radio"]
@@ -347,6 +361,9 @@ input[type="search"]::-webkit-search-results-decoration
     &[disabled]
       cursor: default
       opacity: 0.3
+  @include coarse
+    width: calc(var(--check_width) + 4px)
+    height: calc(var(--check_width) + 4px)    
   
 
 [type="checkbox"]:checked
@@ -457,6 +474,8 @@ input[type="search"]::-webkit-search-results-decoration
     input 
       position: absolute !important
       left: 2px
+      @include coarse
+        left: 4px
     input:checked + span 
       background-color: var(--gray-20)
       border-color: var(--gray-3)
@@ -481,6 +500,9 @@ input[type="search"]::-webkit-search-results-decoration
     @include dark
       &:hover
         background-color: var(--gray-80)
+    @include coarse
+      height: calc(var(--check_width) + 12px)
+      padding-left: calc(var(--check_width) + 16px)   
   
 
 .radio-big
@@ -522,6 +544,7 @@ input[type="search"]::-webkit-search-results-decoration
       color: var(--gray-50)
       &:hover
         color: var(--gray-30)
+      
       
     
   input[type=radio]:checked + label
@@ -570,7 +593,9 @@ input[type="search"]::-webkit-search-results-decoration
       color: var(--gray-40)
     input
       position: absolute
-      left: 2px  
+      left: 2px
+      @include coarse
+        left: 4px
     input:checked + span 
       background-color: var(--gray-20)
       border-color: var(--gray-3)
@@ -596,6 +621,9 @@ input[type="search"]::-webkit-search-results-decoration
     @include dark
       &:hover
         background-color: var(--gray-80)
+    @include coarse
+      height: calc(var(--check_width) + 12px)  
+      padding-left: calc(var(--check_width) + 16px)    
     
 
 .checkbox-big
@@ -605,37 +633,6 @@ input[type="search"]::-webkit-search-results-decoration
   flex-direction: row
 
 
-
-// For touchs interface
-@media (any-pointer: coarse)
-  [type='text'],
-  [type='email'],
-  [type='url'],
-  [type='password'],
-  [type='number'],
-  [type='date'],
-  [type='datetime-local'],
-  [type='month'],
-  [type='search'],
-  [type='tel'],
-  [type='time'],
-  [type='week'],
-  [type="file"],  
-  select[multiple],
-  textarea,
-  .select,
-  select
-    line-height: 36px
-    padding-left: 15px
-    padding-right: 15px
-    font-size: 16px 
-  [type="file"]
-    padding-left: 0  
-    line-height: 18px
-  [type="checkbox"],
-  [type="radio"]   
-    width: 26px
-    height: 26px 
 
 
   
