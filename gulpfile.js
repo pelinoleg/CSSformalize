@@ -3,10 +3,10 @@ const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const postcss = require("gulp-postcss");
 const postCssCombineMediaQuery = require("postcss-combine-media-query");
-const postcssInsert = require("postcss-insert");
+const combineSelectors = require("postcss-combine-duplicated-selectors");
 
 gulp.task("sass", function() {
-	var processors = [postcssInsert({ stripImportant: true }), postCssCombineMediaQuery];
+	var processors = [combineSelectors({ removeDuplicatedProperties: true }), postCssCombineMediaQuery];
 
 	return gulp
 		.src("./sass/**/*.sass")

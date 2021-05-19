@@ -16,6 +16,7 @@ body
   grid-gap: 10px
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) )
   grid-auto-rows: auto
+  
 .forms-item
   border: 1px dashed var(--gray-30)
   border-radius: 5px 
@@ -23,10 +24,10 @@ body
   @include dark
     border-color: var(--gray-75)
   &:first-child
-    background: var(--gray-20)
+    background: var(--gray-25)
     border: none
     @include dark
-      background: var(--gray-90)
+      background: var(--gray-95)
   > *
     margin-bottom: 10px 
     &:last-child
@@ -49,6 +50,7 @@ body
   font-size: 13px
   height: 100%
   justify-content: space-around
+  
   > *
     margin: 10px 0
   label
@@ -63,8 +65,6 @@ textarea,
 input:not([type=checkbox]):not([type=radio]):not([type=time]):not([type=color]):not([type=file])
   min-width: 230px !important
 
-textarea
-  min-height: 150px  !important
 
 
 .source
@@ -85,7 +85,7 @@ textarea
 
 $form-round: 4px
 $shadow-l: 0 1px 3px rgba(#000,0.1)
-$shadow-d: 0 1px 2px rgba(#000,0.25)
+$shadow-d: 0 1px 3px rgba(#000,0.25)
 $shadow-l-in: inset 0 1px 2px rgba(#000,0.15)
 $shadow-d-in: inset 0 1px 2px rgba(#000,0.25)
 
@@ -172,6 +172,7 @@ select
     padding-left: 15px
     padding-right: 15px
     font-size: 16px
+    min-height: 50px
       
 textarea,
 select[multiple]  
@@ -502,8 +503,14 @@ input[type="search"]::-webkit-search-results-decoration
     margin-right: calc(var(--check-width) / 5)
     font-size: 14px
     align-items: center
+    &:hover span
+      background-color: var(--gray-23)
+      color: var(--gray-80)
     @include dark
       color: var(--gray-40)
+      &:hover span
+        background-color: var(--gray-80)
+
     input 
       position: absolute !important
       left: 2px
@@ -531,13 +538,9 @@ input[type="search"]::-webkit-search-results-decoration
     box-sizing: border-box
     border: 1px solid transparent
     color: var(--gray-65)
-    &:hover 
-      background-color: var(--gray-23)
-      color: var(--gray-80)
     @include dark
       color: var(--gray-45)
-      &:hover
-        background-color: var(--gray-80)
+    
     @include coarse
       height: calc(var(--check-width) + 12px)
       padding-left: calc(var(--check-width) + 16px)   
@@ -607,11 +610,11 @@ input[type="search"]::-webkit-search-results-decoration
 
   &.radio-group-small
     padding: 2px
-    border-radius: 5px
+    border-radius: $form-round
     label
       padding: 4px 12px
       font-size: 13px 
-      border-radius: 3px
+      border-radius: $form-round -2px
       @include coarse
         padding: 7px 16px
       
