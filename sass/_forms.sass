@@ -3,9 +3,10 @@
   margin: 0
   padding: 0  
 
+
    
 body
-  background-color: var(--gray-12)
+  background-color: var(--gray-17)
   font-family: sans-serif
   @include dark
     background: var(--gray-85) 
@@ -40,9 +41,6 @@ body
 
 .forms-wrap >  .select
   display: inline-block !important
-.controls
-  margin-top: 5px 
-  display: none 
 .dark-mode
   font-family: sans-serif
   display: flex
@@ -50,34 +48,46 @@ body
   align-items: center
   font-size: 13px
   height: 100%
-  justify-content: center
-  .controls
-    input
-      width: 200px
+  justify-content: space-around
+  > *
+    margin: 10px 0
   label
     margin-left: 7px  
     font-size: var(--col)
     @include dark
       color: var(--gray-40)
-  .checkbox label input:checked + span
-    background-color: var(--gray-95) !important
-
-
 
 select,
 .select,  
-textarea
-  min-width: 200px !important
+textarea,
+input:not([type=checkbox]):not([type=radio]):not([type=time]):not([type=color]):not([type=file])
+  min-width: 230px !important
 
 textarea
   min-height: 150px  !important
-// Demo End
+
+
+.source
+  font-size: 13px
+  color: var(--gray-60)
+  flex-shrink: 0
+  a
+    color: var(--form-color)
+    @include dark
+      color: var(--form-color)
+
+  // Demo End
 
 
 \:root
-  --check_width: 20px  
+  --check-width: 20px  
+  
 
 $form-round: 4px
+$shadow-l: 0 1px 3px rgba(#000,0.1)
+$shadow-d: 0 1px 2px rgba(#000,0.25)
+$shadow-l-in: inset 0 1px 2px rgba(#000,0.15)
+$shadow-d-in: inset 0 1px 2px rgba(#000,0.25)
 
 [type='text'],
 [type='email'],
@@ -97,41 +107,49 @@ textarea,
 .select,
 select
   appearance: none
-  border: 1px solid var(--gray-30)
+  border: 1px solid #fff
   font-size: 14px
   line-height: 26px
   border-radius: $form-round
   padding: 5px 10px
   color: var(--gray-60)
   background-color: #fff
+  box-shadow: $shadow-l
   color-adjust: exact
   transition: border 0.2s linear, box-shadow 0.3s linear
   box-sizing: border-box
   font-family: sans-serif
   display: inline-block
+  transition: filter 0.3s linear
   &[disabled]
     cursor: default
-    background: var(--gray-20)
+    background: var(--gray-15)
+    border-color: var(--gray-10)
     opacity: 0.8
+    &:hover
+      filter: brightness(1)
     @include dark
       opacity: 0.5
   &:focus
     outline: none
-    border-color: var(--form-color) 
     color: var(--gray-80)
-    box-shadow: 0 0 7px rgba(var(--form-color), 0.7)
+    box-shadow: $shadow-l, 0 0 3px 1px var(--form-color)
+      
   &:hover,
   &:focus
+    filter: brightness(1.05)
     @include dark
       &::-webkit-inner-spin-button  // for input type number, arrows  
         opacity: 0.5
         margin-right: 4px
   &::-webkit-inner-spin-button  // for input type number, arrows
     margin-right: 4px  
+    
   @include dark
-    background-color: var(--gray-80)
     border-color: var(--gray-75)
     color: var(--gray-40)
+    box-shadow: $shadow-d
+    background-color: var(--gray-80)
     &:focus
       border-color: var(--form-color)
       color: var(--gray-20)
@@ -140,13 +158,13 @@ select
   &:invalid
     color: var(--form-color-invalid)
     border-color: var(--form-color-invalid)
-    box-shadow: unset
+    box-shadow: $shadow-l
     &::placeholder
       color: var(--form-color-invalid)
     @include dark
       color: var(--form-color-invalid-d)
       border-color: var(--form-color-invalid)
-      box-shadow: unset
+      box-shadow: $shadow-d
       &::placeholder
         color: var(--form-color-invalid-d)
   @include coarse
@@ -190,31 +208,37 @@ select[multiple]
   transition: filter 0.2s linear
   line-height: 0px
   padding: 0
+  box-shadow: unset
+  padding-bottom: 3px
   @include dark
     background-color: transparent
+    box-shadow: unset
   &::file-selector-button,
   &::-webkit-file-upload-button
     margin-right: 15px
     border: none
-    background-color: var(--gray-20)
-    border: 1px solid var(--gray-30)
+    background-color: #fff
+    border: 1px solid #fff
     border-radius: $form-round 
     padding: 4px 10px
     line-height: 20px
     cursor: pointer
+    box-shadow: $shadow-l
+    color: var(--gray-60)
     @include dark
       background-color: var(--gray-80)
       border-color: var(--gray-75)
       color: var(--gray-40)
-  &:hover
-    filter: brightness(0.95)
+      box-shadow: $shadow-d
+  
   @include coarse
     padding-left: 0  
     line-height: 18px  
 
 input[type="color"]  
-  background-color: var(--gray-20)
-  border: 1px solid var(--gray-30)
+  background-color: #fff
+  border: 1px solid #fff
+  box-shadow:  $shadow-l
   border-radius: $form-round
   box-sizing: border-box
   padding: 2px 7px
@@ -253,6 +277,7 @@ input[type="text"].transparent
   background: transparent !important
   border: none
   display: inline-flex
+  box-shadow: unset !important
   &:focus
     box-shadow: unset !important
   @include coarse
@@ -337,33 +362,38 @@ input[type="search"]::-webkit-search-results-decoration
   background-origin: border-box
   user-select: none
   flex-shrink: 0
-  height: var(--check_width)
-  width: var(--check_width)
+  height: var(--check-width)
+  width: var(--check-width)
   background-color: #fff
-  border: 1px solid var(--gray-30)
+  border: 1px solid #fff
   cursor: pointer
-  border-radius: $form-round - 2px
+  border-radius: $form-round - 1px
   transition: border 0.2s linear
   margin-top: 0
   margin-bottom: 0
+  box-shadow: $shadow-l
   &:focus
     outline: none
     border-color: var(--form-color)
   &[disabled]
     cursor: default
     background: var(--gray-30)
+    border-color: var(--gray-30)
     opacity: 0.5
+    box-shadow: unset
   @include dark
-    background-color: var(--gray-70)
-    border-color: var(--gray-60)
+    background-color: var(--gray-90)
+    border-color: var(--gray-80)
+    box-shadow: $shadow-d-in
     &:focus
       border-color: var(--form-color)
     &[disabled]
       cursor: default
-      opacity: 0.3
+      opacity: 0.5
+      box-shadow: unset
   @include coarse
-    width: calc(var(--check_width) + 4px)
-    height: calc(var(--check_width) + 4px)    
+    width: calc(var(--check-width) + 4px)
+    height: calc(var(--check-width) + 4px)
   
 
 [type="checkbox"]:checked
@@ -375,7 +405,8 @@ input[type="search"]::-webkit-search-results-decoration
   border-color: transparent
   @include dark
     background-color: var(--form-color)
-    border-color: transparent
+    border-color: var(--gray-80)
+    box-shadow: unset
   
 [type="radio"]
   border-radius: 100%
@@ -386,13 +417,16 @@ input[type="search"]::-webkit-search-results-decoration
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E")
     @include dark
       background-color: var(--form-color)
-      border-color: var(--form-color) 
+      border-color: var(--form-color)
+      box-shadow: unset 
     
 
 // custom checkbox
 .switch
   --switch-width: 20px
   overflow: hidden
+  @include coarse
+    --switch-width: 24px
   input[type="checkbox"]
     display: none
     & + label
@@ -406,12 +440,14 @@ input[type="search"]::-webkit-search-results-decoration
       border-radius: 50em
       position: relative
       vertical-align: bottom
-      background-color: var(--gray-20)
+      background-color: var(--gray-25)
       transition: background 0.2s ease-in-out
-      box-shadow: inset 0 1px 2px rgba(#000,0.1)
+      box-shadow: $shadow-l-in
+      border: 1px solid var(--gray-15)
       @include dark
         background-color: var(--gray-90)
-        box-shadow: inset 0 1px 2px rgba(#000,0.3)
+        box-shadow: $shadow-d-in
+        border-color: var(--gray-82)
       &:after
         content: ''
         position: absolute
@@ -422,41 +458,39 @@ input[type="search"]::-webkit-search-results-decoration
         top: 2px
         background-color: var(--gray-3)
         border-radius: 50em
-        box-shadow: 0px 1px 2px rgba(#000,0.2)
+        box-shadow: $shadow-l
         border: 1px solid #fff
         box-sizing: border-box
         transition: left 0.2s ease-in-out
         @include dark
           background-color: var(--gray-80)
           border-color: var(--gray-75)
-          box-shadow: 0px 1px 2px rgba(#000,0.4)
+          box-shadow: $shadow-d
     &:checked + label
       background-color: var(--form-color)
       @include dark
         background-color: var(--form-color)
-        box-shadow: inset 0 1px 1px rgba(#000,0.4);
+        box-shadow: $shadow-d-in
       &:after
         left: calc(100% - calc(var(--switch-width) + 2px))
         @include dark
           background-color: var(--gray-85)
           border-color: var(--gray-90)
-          box-shadow: 0px 1px 2px rgba(#000,0.5)
 
 .switch-small
   --switch-width: 16px
+  @include coarse
+    --switch-width: 20px
 .switch-big
   --switch-width: 26px
+  @include coarse
+    --switch-width: 30px
 
-@media (any-pointer: coarse)
-  .switch
-    --switch-width: 24px
-  .switch-small
-    --switch-width: 20px
-  .switch-big
-    --switch-width: 30px 
 
-// custom radio
-.radio 
+
+// custom radio and checkbox
+.radio, 
+.checkbox  
   display: flex
   flex-wrap: wrap
   flex-direction: column
@@ -464,9 +498,8 @@ input[type="search"]::-webkit-search-results-decoration
     display: inline-flex
     cursor: pointer
     position: relative
-    overflow: hidden
-    margin-bottom: calc(var(--check_width) / 5)
-    margin-right: calc(var(--check_width) / 5)
+    margin-bottom: calc(var(--check-width) / 5)
+    margin-right: calc(var(--check-width) / 5)
     font-size: 14px
     align-items: center
     @include dark
@@ -477,37 +510,48 @@ input[type="search"]::-webkit-search-results-decoration
       @include coarse
         left: 4px
     input:checked + span 
-      background-color: var(--gray-20)
-      border-color: var(--gray-3)
-      box-shadow: inset 0 1px 2px rgba(#000,0.1)
+      background-color: #fff
+      border-color: #fff
+      box-shadow:  $shadow-l
+      color: var(--gray-75)
       @include dark
-        background-color: var(--gray-90)
-        box-shadow: inset 0 1px 2px rgba(#000,0.25)
-        border-color: var(--gray-82)
+        border-color: var(--gray-80)
+        box-shadow: $shadow-d
+        background-color: var(--gray-80)
+        color: var(--gray-15)
 
   span 
     display: flex
     align-items: center
-    padding: 3px calc(var(--check_width) / 1.5) 3px calc(var(--check_width) + 10px)
+    padding: 3px calc(var(--check-width) / 1.5) 3px calc(var(--check-width) + 6px)
     border-radius: 100em
     transition: 0.25s ease
     user-select: none
-    height: calc(var(--check_width) + 4px)
+    height: calc(var(--check-width) + 4px)
     box-sizing: border-box
     border: 1px solid transparent
+    color: var(--gray-65)
     &:hover 
-      background-color: var(--gray-15)
+      background-color: var(--gray-23)
+      color: var(--gray-80)
     @include dark
+      color: var(--gray-45)
       &:hover
         background-color: var(--gray-80)
     @include coarse
-      height: calc(var(--check_width) + 12px)
-      padding-left: calc(var(--check_width) + 16px)   
+      height: calc(var(--check-width) + 12px)
+      padding-left: calc(var(--check-width) + 16px)   
   
+.checkbox
+  span
+    border-radius: $form-round 
 
-.radio-big
-  --check_width: 24px
-
+.radio-big,
+.checkbox-big  
+  --check-width: 24px
+  span
+    padding-left: calc(var(--check-width) + 8px)
+.checkbox-inline,
 .radio-inline
   flex-direction: row 
 
@@ -515,14 +559,14 @@ input[type="search"]::-webkit-search-results-decoration
 .radio-group 
   border-radius: $form-round
   overflow: hidden
-  background: var(--gray-20)
+  background: var(--gray-25)
   padding: 3px
-  box-shadow: inset 0 1px 2px rgba(#000,0.1)
+  box-shadow: $shadow-l-in
   display: inline-flex !important
   user-select: none  
-  border: 1px solid var(--gray-3)
+  border: 1px solid var(--gray-15)
   @include dark
-    box-shadow: inset 0 1px 2px rgba(#000,0.25)
+    box-shadow: $shadow-d-in
     background-color: var(--gray-90)
     border-color: var(--gray-82)
   input[type=radio]
@@ -530,7 +574,7 @@ input[type="search"]::-webkit-search-results-decoration
     visibility: hidden
     display: none
   label 
-    color: var(--gray-70)
+    color: var(--gray-65)
     cursor: pointer
     padding: 5px 20px
     transition: background 0.1s ease-in-out, color 0.2s linear
@@ -544,6 +588,8 @@ input[type="search"]::-webkit-search-results-decoration
       color: var(--gray-50)
       &:hover
         color: var(--gray-30)
+    @include coarse
+      padding: 7px 22px    
       
       
     
@@ -551,88 +597,27 @@ input[type="search"]::-webkit-search-results-decoration
     color: var(--gray-80)
     background: var(--gray-5)
     border: 1px solid #fff
-    box-shadow: 0 1px 2px rgba(#000,0.3) 
+    box-shadow: $shadow-l
     @include dark
       background-color: var(--gray-80)
       border-color: var(--gray-75) 
       color: var(--gray-30)
+      box-shadow: $shadow-d
 
 
   &.radio-group-small
     padding: 2px
     border-radius: 5px
-    @include dark
-      box-shadow: inset 0 1px 1px rgba(#000,0.25)
     label
       padding: 4px 12px
       font-size: 13px 
-      border-radius: 3px   
-
+      border-radius: 3px
+      @include coarse
+        padding: 7px 16px
+      
+        
+      
   &.radio-group-rouned
     border-radius: 50em  !important
     label
       border-radius: 50em !important
-
-
-
-// custom checkbox
-.checkbox
-  display: flex
-  flex-wrap: wrap
-  flex-direction: column
-  label
-    display: inline-flex
-    cursor: pointer
-    position: relative
-    overflow: hidden
-    margin-bottom: calc(var(--check_width) / 5)
-    margin-right: calc(var(--check_width) / 5)
-    font-size: 14px
-    align-items: center
-    @include dark
-      color: var(--gray-40)
-    input
-      position: absolute
-      left: 2px
-      @include coarse
-        left: 4px
-    input:checked + span 
-      background-color: var(--gray-20)
-      border-color: var(--gray-3)
-      box-shadow: inset 0 1px 2px rgba(#000,0.1)
-      @include dark
-        background-color: var(--gray-90)
-        box-shadow: inset 0 1px 2px rgba(#000,0.25)
-        border-color: var(--gray-82)
-        
-          
-  span 
-    display: flex
-    align-items: center
-    padding: 5px calc(var(--check_width) / 1.5) 5px calc(var(--check_width) + 10px)
-    border-radius: $form-round 
-    transition: 0.25s ease
-    user-select: none
-    height: calc(var(--check_width) + 4px)
-    box-sizing: border-box
-    border: 1px solid transparent
-    &:hover 
-      background-color: var(--gray-15)
-    @include dark
-      &:hover
-        background-color: var(--gray-80)
-    @include coarse
-      height: calc(var(--check_width) + 12px)  
-      padding-left: calc(var(--check_width) + 16px)    
-    
-
-.checkbox-big
-  --check_width: 24px
-
-.checkbox-inline
-  flex-direction: row
-
-
-
-
-  
