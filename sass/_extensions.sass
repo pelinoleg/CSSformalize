@@ -46,10 +46,27 @@
 
 
 
-$gr: 3,5,7,10,12,15,17,20,23,25,30,35,40,45,50,55,60,65,70,75,80,82,85,90,95
+$gr: 3,5,7,10,12,15,17,20,25,30,35,40,45,50,55,60,65,70,75,80,82,85,90,95
 @each $pr in $gr
 	\:root
     --gray-#{$pr}:  hsl(var(--gray-h), var(--gray-s), calc(var(--gray-l) - #{$pr}%))
 
 
 
+\:root[data-theme="light"]
+  --gray-h: 20
+  --gray-s: 12%
+
+
+.hide-input
+  position: absolute
+  z-index: -1
+  width: 0
+  height: 0
+  padding: 0
+  margin: 0
+  border: none
+  overflow: hidden  
+  box-shadow: unset !important
+  &:focus
+    box-shadow: unset !important
