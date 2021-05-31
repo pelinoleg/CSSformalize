@@ -5,4 +5,80 @@
 /*  forms  */
 @import forms 
 
-    
+
+
+// Demo
+*
+  margin: 0
+  padding: 0  
+
+body
+  background-color: var(--gray-17)
+  font-family: sans-serif
+  @include dark
+    background: var(--gray-85) 
+.forms-wrap
+  margin: 15px
+  display: grid
+  grid-gap: 10px
+  grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) )
+  grid-auto-rows: auto
+  
+.forms-item
+  border: 1px dashed var(--gray-30)
+  border-radius: 5px 
+  padding: 10px
+  @include dark
+    border-color: var(--gray-75)
+  &:first-child
+    border: none
+   
+  > *
+    margin-bottom: 10px 
+    &:last-child
+      margin-bottom: 0  
+.forms-item-title
+  color: var(--gray-50)
+  font-size: 13px
+  margin-bottom: 10px
+  display: block  
+  @include dark
+    color: var(--gray-60)  
+
+.forms-wrap >  .select
+  display: inline-block !important
+.dark-mode
+  font-family: sans-serif
+  display: flex
+  flex-direction: column
+  align-items: center
+  font-size: 13px
+  height: 100%
+  justify-content: space-around
+  
+  > *
+    margin: 10px 0
+  label
+    margin-left: 7px  
+    font-size: var(--col)
+    @include dark
+      color: var(--gray-40)
+
+select,
+.select,  
+textarea,
+input:not([type=checkbox]):not([type=radio]):not([type=time]):not([type=color]):not([type=file])
+  width: 100%
+
+
+
+.source
+  font-size: 13px
+  color: var(--gray-60)
+  flex-shrink: 0
+  a
+    color: var(--form-color)
+    @include dark
+      color: var(--form-color)
+
+// Demo End      
