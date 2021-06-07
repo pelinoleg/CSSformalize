@@ -37,6 +37,8 @@ If you want to use form components, you need to look at their structure in the i
 - index.css file will be generated automatically
 - To apply styles you need to put class `custom-form` to each element. For example: `<input type="text class="custom-form" />`
 
+---
+
 > **Changelog:**
 >
 > ##### v1.1 (07.06.2021)
