@@ -1,6 +1,6 @@
 # Custom Css Forms
 
-![Dark and Light mode example for custom css forms](https://pelinoleg.github.io/Custom-Css-Forms/custom_forms_demo.jpg)
+![Dark and Light mode example for custom css forms](https://github.com/pelinoleg/Fillz-Forms/custom_forms_demo.jpg)
 
 ### Description
 
@@ -10,7 +10,7 @@ There are also some components here, such as grouped radio buttons, grouped chec
 
 ### Demo:
 
-[https://pelinoleg.github.io/Custom-Css-Forms/](https://pelinoleg.github.io/Custom-Css-Forms/)
+[https://pelinoleg.github.io/Custom-Css-Forms/](https://github.com/pelinoleg/Fillz-Forms)
 
 ### How to Install:
 
