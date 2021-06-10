@@ -1,6 +1,6 @@
 # Custom Css Forms
 
-![Dark and Light mode example for custom css forms](https://github.com/pelinoleg/Fillz-Forms/custom_forms_demo.jpg)
+![Dark and Light mode example for custom css forms](https://github.com/pelinoleg/Fillz-Forms/blob/master/custom_forms_demo.jpg)
 
 ### Description
 
