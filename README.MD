@@ -1,6 +1,6 @@
-[![GitHub forks](https://img.shields.io/github/forks/pelinoleg/GulpBlank.svg)](https://github.com/pelinoleg/Fillz-Forms/network)
-[![GitHub issues](https://img.shields.io/github/issues/pelinoleg/GulpBlank.svg)](https://github.com/pelinoleg/Fillz-Forms/issues)
-[![GitHub stars](https://img.shields.io/github/stars/pelinoleg/GulpBlank.svg)](https://github.com/pelinoleg/Fillz-Forms/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/network)
+[![GitHub issues](https://img.shields.io/github/issues/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/issues)
+[![GitHub stars](https://img.shields.io/github/stars/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/stargazers)
 # Custom Css Forms
 
 ![Dark and Light mode example for custom css forms](https://github.com/pelinoleg/Fillz-Forms/blob/master/custom_forms_demo.jpg)
