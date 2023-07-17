@@ -1236,11 +1236,13 @@ code[class*=language-], pre[class*=language-] {
 .install-link {
 
   margin: 50px 0 40px;
-
+  i {
+    margin: 0 10px;
+  }
   a {
     font-size: 16px;
     text-decoration: none;
-    border-bottom: 1px dashed var(--demo-text-color);
+    //border-bottom: 1px dashed var(--demo-text-color);
     color: var(--demo-text-color);
   }
 }
