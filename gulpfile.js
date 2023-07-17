@@ -1,25 +1,32 @@
-const gulp = require("gulp");
-const sass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
-const postcss = require("gulp-postcss");
-const postCssCombineMediaQuery = require("postcss-combine-media-query");
-const combineSelectors = require("postcss-combine-duplicated-selectors");
+const { src, dest, watch, series} = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
+const browserSync = require('browser-sync').create();
+const sourcemaps = require('gulp-sourcemaps');
 
-gulp.task("sass", function() {
-	var processors = [combineSelectors({ removeDuplicatedProperties: true }), postCssCombineMediaQuery];
 
-	return gulp
-		.src("./sass/**/*.sass")
-		.pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
-		.pipe(
-			autoprefixer({
-				cascade: false,
-			})
-		)
-		.pipe(postcss(processors))
-		.pipe(gulp.dest("./css"));
-});
 
-gulp.task("watch", function() {
-	gulp.watch("./sass/**/*.sass", gulp.series("sass"));
-});
+function sassTask() {
+	return src('./scss/*.scss')
+		// .pipe(plumber())
+		// .pipe(sourcemaps.init()) // Инициализация source map
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer())
+		// .pipe(sourcemaps.write('.')) // Запись source map
+		.pipe(dest(`./css`));
+}
+
+function serve() {
+	browserSync.init({
+		server: `./`
+	});
+
+	watch('./scss/*.scss', sassTask);
+	watch(['./css/**/*', './*.html']).on('change', browserSync.reload);
+
+}
+
+
+
+exports.default = series(sassTask, serve);

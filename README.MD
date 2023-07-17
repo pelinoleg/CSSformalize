@@ -1,57 +1,36 @@
 [![GitHub forks](https://img.shields.io/github/forks/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/network)
 [![GitHub issues](https://img.shields.io/github/issues/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/issues)
 [![GitHub stars](https://img.shields.io/github/stars/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/stargazers)
-# Custom Css Forms
+
+
+# CSSformalize v2.0
+### The Fast-Track to Stylish HTML Forms!
+
+For a live demo, visit [cssformalize.com](http://cssformalize.com). Happy designing!
+
 
 ![Dark and Light mode example for custom css forms](https://github.com/pelinoleg/Fillz-Forms/blob/master/custom_forms_demo.jpg)
 
-### Description
 
-This is a set of CSS rules that help you style standard Html forms without using javascript.
 
-There are also some components here, such as grouped radio buttons, grouped checkboxes, switches and custom select
+**CSSformalize** is a groundbreaking CSS framework engineered exclusively for effortless customization of native HTML forms. With just a few clicks on our intuitive on-site interface at [cssformalize.com](http://cssformalize.com), you can define paddings, dimensions, and color schemes tailored to your preference. Simply link our lightweight CSS file to your project, integrate the automatically generated CSS variables, and watch your form designs come to life!
 
-### Demo:
+## Key Features
+- **Purely Native**: Leverage the power of native forms - no JavaScript involved, only CSS.
+- **Complete Customizability**: Every aspect is customizable using CSS variables for unrivaled design flexibility.
+- **State-of-the-Art CSS Properties**: CSSformalize harnesses the latest CSS properties, incorporating cutting-edge features that are ready to use.
+- **Design Freedom**: Generate a design aesthetic that aligns perfectly with your vision.
+- **Lightweight and User-friendly**: Optimized for minimum file size and easy integration for a seamless user experience.
 
-[https://pelinoleg.github.io/Fillz-Forms/](https://pelinoleg.github.io/Fillz-Forms/)
+## Quick Start Guide
+Getting CSSformalize working with your project is straightforward. Just follow these easy steps:
 
-### How to Install:
+1. **Form Customization**: Visit [cssformalize.com](http://cssformalize.com). Use our left sidebar to adjust global variables that define the overall appearance of your forms. In the central view, observe how your adjustments affect your forms and fine-tune the design further by customizing local variables unique to each form.
 
-#### If you do not make changes in styles:
+2. **Style Integration**: Incorporate the 'formalize.css' stylesheet into your project. You can download it from our GitHub [URL] or fetch it directly from the CDN [URL].
+   You can also install CSSformalize through npm using the following command: `[command]`
 
-- Download file css/index.css and connect the file to the page.
+3. **Variable Implementation**: After linking the 'formalize.css' file, copy and paste the CSS variables generated during the customization process.
 
-- Styles will be applied to standard forms immediately.
+4. **Copy HTML Code**: Under each form group, you'll find a tab that reveals the necessary HTML code upon clicking. Copy this code into your project for the styles to take effect.
 
-If you want to use form components, you need to look at their structure in the index.html
-
-#### If you want to change the styles of the forms:
-
-- Clone project
-
-- Install node.js ( [Node.js](https://nodejs.org/en/) )
-
-- Install Gulp `sudo npm i gulp -g`
-
-- Run inside the project: `npm install`
-
-- Run `gulp watch` and change styles in the sass folder
-
-- index.css file will be generated automatically
-- To apply styles you need to put class `custom-form` to each element. For example: `<input type="text class="custom-form" />`
-
----
-
-> **Changelog:**
->
-> ##### v1.1 (07.06.2021)
->
-> - Changed from global styles to class
-> - Added input type list
-> - bug fixes
-
----
-
-> **Todo:**
-
-> Description of styles and mixins

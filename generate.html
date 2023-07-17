@@ -1,0 +1,1906 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSSformalize - The Fast-Track to Stylish Forms!</title>
+    <meta
+      name="description"
+      content="CSSformalize is a groundbreaking CSS framework designed to simplify and speed up the customization of your system HTML forms. Create unique form styles in a few clicks and enhance your design efficiency."
+    />
+    <meta
+      name="keywords"
+      content="CSS, HTML, Forms, Design, Customization, Framework, CSSformalize, Styling, Web Development, Frontend"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Pelin Oleg" />
+    <meta property="og:title" content="CSSformalize - The Fast-Track to Stylish Forms!" />
+    <meta
+      property="og:description"
+      content="CSSformalize is a groundbreaking CSS framework designed to simplify and speed up the customization of your system HTML forms. Create unique form styles in a few clicks and enhance your design efficiency."
+    />
+    <meta property="og:image" content="URL_TO_YOUR_IMAGE" />
+    <meta property="og:url" content="YOUR_WEBSITE_URL" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="./css/css-formalize.css" />
+    <link rel="stylesheet" href="./css/demo.css" />
+    <link rel="stylesheet" href="./css/prism.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
+    <!-- 'classic' theme -->
+  </head>
+
+  <body class="demo">
+  <div class="circles">
+    <div class="circle circle-1">
+      <svg
+              viewBox="0 0 200 200"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              style="overflow: visible"
+      >
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(80)">
+            <stop offset="20%" stop-color="rgba(162, 26, 215, 0.25)" />
+            <stop offset="100%" stop-color="rgba(254, 8, 134, 0.25)" />
+          </linearGradient>
+        </defs>
+        <g>
+          <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="scale"
+                  values="1;1.2;1"
+                  begin="0s"
+                  dur="80s"
+                  repeatCount="indefinite"
+                  additive="sum"
+          />
+          <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="rotate"
+                  values="0 100 100;360 100 100"
+                  begin="0s"
+                  dur="200s"
+                  repeatCount="indefinite"
+                  additive="sum"
+          />
+          <path
+                  fill="url(#gradient)"
+                  stroke="#ebedf1"
+                  stroke-width="5"
+                  stroke-opacity="0.5"
+                  d="M38.5,-64.7C51.7,-59,65.4,-52.4,75.1,-41.4C84.9,-30.5,90.6,-15.2,88.8,-1C87.1,13.2,77.8,26.4,69.5,39.7C61.1,53,53.6,66.4,42.2,74.3C30.7,82.2,15.4,84.6,-0.3,85.1C-15.9,85.5,-31.7,84,-45,77.2C-58.4,70.3,-69.1,58.2,-75.5,44.5C-81.8,30.7,-83.7,15.4,-82.1,0.9C-80.4,-13.5,-75.3,-27,-69.1,-41C-63,-55.1,-55.8,-69.6,-44.1,-76.2C-32.4,-82.7,-16.2,-81.2,-1.8,-78.1C12.6,-75,25.3,-70.4,38.5,-64.7Z"
+                  transform="translate(100 100)"
+          >
+            <animate
+                    repeatCount="indefinite"
+                    fill="freeze"
+                    attributeName="d"
+                    dur="50s"
+                    values="M38.5,-64.7C51.7,-59,65.4,-52.4,75.1,-41.4C84.9,-30.5,90.6,-15.2,88.8,-1C87.1,13.2,77.8,26.4,69.5,39.7C61.1,53,53.6,66.4,42.2,74.3C30.7,82.2,15.4,84.6,-0.3,85.1C-15.9,85.5,-31.7,84,-45,77.2C-58.4,70.3,-69.1,58.2,-75.5,44.5C-81.8,30.7,-83.7,15.4,-82.1,0.9C-80.4,-13.5,-75.3,-27,-69.1,-41C-63,-55.1,-55.8,-69.6,-44.1,-76.2C-32.4,-82.7,-16.2,-81.2,-1.8,-78.1C12.6,-75,25.3,-70.4,38.5,-64.7Z;
+              M19.7,-35.6C26.2,-30.4,32.6,-26.5,38.7,-20.7C44.8,-15,50.7,-7.5,52.8,1.2C54.9,9.9,53.3,19.9,49.9,30.3C46.5,40.7,41.3,51.6,32.6,53.5C24,55.4,12,48.4,-2,51.9C-16,55.3,-32.1,69.3,-39.4,66.7C-46.8,64,-45.5,44.8,-49.1,30.9C-52.6,17,-61.1,8.5,-67.6,-3.8C-74.2,-16.1,-78.9,-32.2,-71.7,-39.8C-64.6,-47.5,-45.6,-46.7,-31.6,-47.6C-17.7,-48.6,-8.8,-51.2,-1.1,-49.2C6.6,-47.3,13.2,-40.8,19.7,-35.6Z;
+              M38.5,-64.7C51.7,-59,65.4,-52.4,75.1,-41.4C84.9,-30.5,90.6,-15.2,88.8,-1C87.1,13.2,77.8,26.4,69.5,39.7C61.1,53,53.6,66.4,42.2,74.3C30.7,82.2,15.4,84.6,-0.3,85.1C-15.9,85.5,-31.7,84,-45,77.2C-58.4,70.3,-69.1,58.2,-75.5,44.5C-81.8,30.7,-83.7,15.4,-82.1,0.9C-80.4,-13.5,-75.3,-27,-69.1,-41C-63,-55.1,-55.8,-69.6,-44.1,-76.2C-32.4,-82.7,-16.2,-81.2,-1.8,-78.1C12.6,-75,25.3,-70.4,38.5,-64.7Z"
+            />
+            <animate attributeName="stroke-width" dur="20s" values="1;15;1" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" dur="20s" values="0.9;0.75;0.95" repeatCount="indefinite" />
+          </path>
+        </g>
+      </svg>
+    </div>
+    <div class="circle circle-2">
+      <svg
+              viewBox="0 0 200 200"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              style="overflow: visible"
+      >
+        <defs>
+          <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(100)">
+            <stop offset="0%" stop-color="rgba(162, 26, 215, 0.25)" />
+            <stop offset="100%" stop-color="rgba(254, 8, 134, 0.25)" />
+          </linearGradient>
+        </defs>
+        <g>
+          <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="scale"
+                  values="1;1.5;1"
+                  begin="0s"
+                  dur="50s"
+                  repeatCount="indefinite"
+                  additive="sum"
+          />
+          <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="rotate"
+                  values="0 100 100;360 100 100"
+                  begin="0s"
+                  dur="120s"
+                  repeatCount="indefinite"
+                  additive="sum"
+          />
+          <path
+                  fill="url(#gradient2)"
+                  stroke="#ebedf1"
+                  stroke-width="10"
+                  stroke-opacity="0.1"
+                  d="M30.5,-49.2C42.5,-45.9,57.1,-43.7,66.7,-35.7C76.3,-27.6,80.7,-13.8,81.5,0.4C82.2,14.7,79.3,29.4,70.6,39C62,48.6,47.6,53.1,34.9,57C22.2,60.9,11.1,64.2,-2.5,68.6C-16.1,72.9,-32.2,78.4,-44.5,74.2C-56.8,70,-65.3,56.3,-73.4,42.3C-81.6,28.4,-89.4,14.2,-85.1,2.4C-80.9,-9.3,-64.6,-18.6,-53.9,-28.2C-43.3,-37.8,-38.3,-47.8,-30.3,-53.3C-22.2,-58.9,-11.1,-60.2,-0.9,-58.6C9.3,-57,18.5,-52.5,30.5,-49.2Z"
+                  transform="translate(100 100)"
+          >
+            <animate
+                    repeatCount="indefinite"
+                    fill="freeze"
+                    attributeName="d"
+                    dur="120s"
+                    values="M30.5,-49.2C42.5,-45.9,57.1,-43.7,66.7,-35.7C76.3,-27.6,80.7,-13.8,81.5,0.4C82.2,14.7,79.3,29.4,70.6,39C62,48.6,47.6,53.1,34.9,57C22.2,60.9,11.1,64.2,-2.5,68.6C-16.1,72.9,-32.2,78.4,-44.5,74.2C-56.8,70,-65.3,56.3,-73.4,42.3C-81.6,28.4,-89.4,14.2,-85.1,2.4C-80.9,-9.3,-64.6,-18.6,-53.9,-28.2C-43.3,-37.8,-38.3,-47.8,-30.3,-53.3C-22.2,-58.9,-11.1,-60.2,-0.9,-58.6C9.3,-57,18.5,-52.5,30.5,-49.2Z;
+              M26.6,-48.5C34.2,-41.7,39.9,-34,50,-25.8C60.1,-17.6,74.6,-8.8,79.2,2.6C83.7,14.1,78.5,28.2,71.6,42C64.8,55.9,56.4,69.5,44.2,67.1C32,64.7,16,46.3,2.6,41.9C-10.9,37.4,-21.7,46.9,-29.3,46.7C-36.9,46.4,-41.1,36.3,-43.9,26.9C-46.7,17.4,-48,8.7,-52.5,-2.6C-57,-13.9,-64.8,-27.9,-63.4,-39.7C-62,-51.5,-51.5,-61.2,-39.4,-65.4C-27.3,-69.5,-13.7,-68.2,-2.1,-64.6C9.5,-61,19,-55.2,26.6,-48.5Z;
+              M30.5,-49.2C42.5,-45.9,57.1,-43.7,66.7,-35.7C76.3,-27.6,80.7,-13.8,81.5,0.4C82.2,14.7,79.3,29.4,70.6,39C62,48.6,47.6,53.1,34.9,57C22.2,60.9,11.1,64.2,-2.5,68.6C-16.1,72.9,-32.2,78.4,-44.5,74.2C-56.8,70,-65.3,56.3,-73.4,42.3C-81.6,28.4,-89.4,14.2,-85.1,2.4C-80.9,-9.3,-64.6,-18.6,-53.9,-28.2C-43.3,-37.8,-38.3,-47.8,-30.3,-53.3C-22.2,-58.9,-11.1,-60.2,-0.9,-58.6C9.3,-57,18.5,-52.5,30.5,-49.2Z"
+            />
+            <animate attributeName="stroke-width" dur="20s" values="1;10;1" repeatCount="indefinite" />
+            <animate attributeName="stroke-opacity" dur="20s" values="0.9;0.75;0.95" repeatCount="indefinite" />
+          </path>
+        </g>
+      </svg>
+    </div>
+    <div class="circle circle-3"></div>
+  </div>
+
+    <div class="page">
+      <aside class="sidebar">
+        <div class="sidebar-content">
+          <div class="sidebar-in custom-scroll">
+            <div class="sidebar-title">Customize your form</div>
+            <div class="sidebar-wrap custom-scroll">
+              <div class="meta-dark">
+                <div class="cform-switch">
+                  <input type="checkbox" data-id="meta" id="meta" />
+                  <label for="meta"></label>
+                </div>
+                <label for="meta"> apply dark meta</label>
+              </div>
+
+              <div class="sidebar-options">
+                <!--                  range options-->
+                <div class="sidebar-option range-option">
+                  <span>Checkbox and Radio Size:</span>
+                  <div class="option">
+                    <input
+                      type="range"
+                      data-id="cFormCheckboxWidth"
+                      data-class=":root"
+                      min="10"
+                      max="50"
+                      value="26"
+                      class="cform"
+                    />
+                  </div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option range-option">
+                  <span>Border Width:</span>
+                  <div class="option">
+                    <input type="range" data-id="cFormBorderWidth" data-class=":root" min="0" max="5" value="2" class="cform" />
+                  </div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option range-option">
+                  <span>Border Width Focus ( :focus ):</span>
+                  <div class="option">
+                    <input
+                      type="range"
+                      data-id="cFormBorderWidthFocus"
+                      data-class=":root"
+                      min="0"
+                      max="10"
+                      value="2"
+                      class="cform"
+                    />
+                  </div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option range-option">
+                  <span>Form Radius:</span>
+                  <div class="option">
+                    <input type="range" data-id="cFormRadius" data-class=":root" min="0" max="50" value="10" class="cform" />
+                  </div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option range-option">
+                  <span>Form Font Size :</span>
+                  <div class="option">
+                    <input type="range" data-id="cFormFontSize" data-class=":root" min="10" max="30" value="16" class="cform" />
+                  </div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option range-option">
+                  <span>Form Paddings:</span>
+                  <div class="option">
+                    <input type="range" data-id="cFormPadding" data-class=":root" min="0" max="20" value="5" class="cform" />
+                  </div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option range-option">
+                  <span>Border Blur on focus:</span>
+                  <div class="option">
+                    <input type="range" data-id="cFormBorderBlur" data-class=":root" min="0" max="10" value="0" class="cform" />
+                  </div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!--                color options-->
+                <div class="sidebar-option color-option">
+                  <span>Demo Background: <i class="tooltip" data-tooltip="demo-bg">?</i></span>
+                  <div class="option"><button data-class=":root" data-id="demoBg" class="input-color"></button></div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option color-option">
+                  <span>Inputs Background:</span>
+                  <div class="option"><button data-class=":root" data-id="cFormBg" class="input-color"></button></div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option color-option">
+                  <span>Inputs Focus Background:</span>
+                  <div class="option"><button data-class=":root" data-id="cFormFocusBg" class="input-color"></button></div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option color-option">
+                  <span>Text Color:</span>
+                  <div class="option"><button data-class=":root" data-id="cFormTextColor" class="input-color"></button></div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option color-option">
+                  <span>Form Accent Background:</span>
+                  <div class="option"><button data-class=":root" data-id="cFormAccent" class="input-color"></button></div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option color-option">
+                  <span>Form Accent Color:</span>
+                  <div class="option"><button data-class=":root" data-id="cFormAccentColor" class="input-color"></button></div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option color-option">
+                  <span>Border Color:</span>
+                  <div class="option"><button data-class=":root" data-id="cFormBorderColor" class="input-color"></button></div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option color-option">
+                  <span>Focus Border Color:</span>
+                  <div class="option">
+                    <button data-class=":root" data-id="cFormBorderFocusColor" class="input-color"></button>
+                  </div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="sidebar-option color-option">
+                  <span>Error Color:</span>
+                  <div class="option"><button data-class=":root" data-id="cFormError" class="input-color"></button></div>
+                  <div class="reset-area">
+                    <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="options-footer">
+              <div class="show-changed">
+                <div class="cform-switch">
+                  <input type="checkbox" id="show-changed-checkbox" data-id="show-changed" disabled />
+                  <label for="show-changed-checkbox"></label>
+                </div>
+                <label for="show-changed-checkbox">Show only changed</label>
+              </div>
+
+              <button data-id="resetButton" class="cform-btn cform-custom-btn cform-btn-primary active">Reset to default</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="page-right">
+        <main>
+          <div class="main-content">
+            <div class="forms-wrap">
+              <article class="customize-description">
+                <div class="home-link"><a href="./index.html">Return to Home Page</a></div>
+
+                <h2>Here you can generate styles for forms tailored to your project's design.</h2>
+                <br />
+                <ul>
+                  <li>On the left sidebar, we set global variables.</li>
+                  <li>In the center, we view the result and adjust local variables for each form group.</li>
+                  <li>And finally, we just copy the variables from the right sidebar.</li>
+                </ul>
+
+                <p>We have also created several themes:</p>
+                <div class="theme-buttons">
+                  <button data-id="themeButton" class="cform-btn cform-btn-info cform-btn-rounded">Theme 1</button>
+                  <button data-id="themeButton2" class="cform-btn cform-btn-info cform-btn-rounded">Theme 2</button>
+                  <button data-id="themeButton3" class="cform-btn cform-btn-info cform-btn-rounded">Theme 3</button>
+                  <button data-id="themeButton4" class="cform-btn cform-btn-info cform-btn-rounded">Theme 4</button>
+                  <button data-id="themeButton5" class="cform-btn cform-btn-info cform-btn-rounded">Theme 5</button>
+                </div>
+              </article>
+
+              <!-- input type text, password, date time.... -->
+              <div class="form-wrap">
+                <div class="forms-item">
+                  <span class="forms-item-title">Input type Text, Password, Date, Time and other..</span>
+                  <div class="forms-item-in">
+                    <div class="forms-item-grid">
+                      <input
+                        class="cform cform-custom-input"
+                        type="email"
+                        placeholder="disabled"
+                        disabled="true"
+                        value="disabled"
+                      />
+                      <input class="cform cform-custom-input invalid" type="number" placeholder="input invalid" />
+                      <input class="cform cform-custom-input" type="password" placeholder="password" name="password" />
+                      <input class="cform cform-custom-input focus" type="text" placeholder="Focused State" />
+
+                      <input list="tech" class="select cform cform-custom-input" placeholder="input list" />
+
+                      <datalist id="tech">
+                        <option value="HTML"></option>
+                        <option value="CSS"></option>
+                        <option value="Javascript"></option>
+                        <option value="Gulp"></option>
+                        <option value="SASS"></option>
+                        <option value="PostCSS"></option>
+                        <option value="Git"></option>
+                      </datalist>
+
+                      <input class="cform cform-custom-input" type="number" placeholder="number" />
+                      <input class="cform cform-custom-input" type="date" />
+                      <input class="cform cform-custom-input focus-ring" type="datetime-local" />
+                      <input class="cform cform-custom-input" type="month" />
+
+                      <input class="cform cform-custom-input" name="login" type="text" placeholder="search" />
+                      <input class="cform cform-custom-input" type="tel" placeholder="phone" />
+                      <input class="cform cform-custom-input" type="time" />
+                      <input class="cform cform-custom-input" type="week" />
+
+                      <select class="cform cform-custom-input" name="" id="id">
+                        <option value="select">
+                          Select
+                        </option>
+                        <option value="select">select 1</option>
+                        <option value="select">select 2</option>
+                        <option value="select">select 3</option>
+                        <option value="select">select 4</option>
+                        <option value="select">select 5</option>
+                        <option value="select">select 6</option>
+                        <option value="select">select 7</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="forms-item-in">
+                    <div class="forms-item-grid">
+                      <fieldset class="cform cform-custom-input">
+                        <legend>Fieldset Legend</legend>
+                        <input type="text" tabindex="1" class="cform" />
+                      </fieldset>
+
+                      <textarea class="cform cform-custom-input" name="" rows="5" placeholder="text">
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et mollitia, odio veritatis culpa sint tempora optio placeat nobis inventore accusantium asperiores quam vero laboriosam quo non! Deleniti, cupiditate tempora. Impedit!
+			</textarea
+                      >
+
+                      <select class="cform cform-custom-input" name="" id="" multiple>
+                        <option value="select">select 1</option>
+                        <option value="select">select 2</option>
+                        <option value="select">select 3</option>
+                        <option value="select">select 4</option>
+                        <option value="select">select 5</option>
+                        <option value="select">select 6</option>
+                        <option value="select">select 7</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab-buttons">
+                    <button class="tab-button" data-target="content6-1">Customize <strong>this</strong> form group</button>
+                    <button class="tab-button" data-target="content6-2">Show html</button>
+                  </div>
+                  <div class="tab-content-wrap">
+                    <div class="tab-content" id="content6-1">
+                      <div class="customize-container flex-5-4">
+                        <div class="customize-container-in">
+                          <div class="sidebar-option color-option">
+                            <span>Inputs Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-input" data-id="cFormBg" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Inputs Focus Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-input" data-id="cFormFocusBg" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Inputs placeholder:</span>
+                            <div class="option">
+                              <button
+                                data-class=".cform-custom-input"
+                                data-id="cFormTextPlaceholderColor"
+                                class="input-color"
+                              ></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Text Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-input" data-id="cFormTextColor" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Legend Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-input" data-id="cFormLegend" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Border Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-input" data-id="cFormBorderColor" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Border Focus Color:</span>
+                            <div class="option">
+                              <button
+                                data-class=".cform-custom-input"
+                                data-id="cFormBorderFocusColor"
+                                class="input-color"
+                              ></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="customize-container-in">
+                          <div class="sidebar-option range-option">
+                            <span>Inputs padding:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormPadding"
+                                data-class=".cform-custom-input"
+                                min="0"
+                                max="11"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Border Radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-custom-input"
+                                min="0"
+                                max="40"
+                                value="5"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option range-option">
+                            <span>Border Width:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormBorderWidth"
+                                data-class=".cform-custom-input"
+                                min="0"
+                                max="10"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option range-option">
+                            <span>Border Width on Focus:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormBorderWidthFocus"
+                                data-class=".cform-custom-input"
+                                min="0"
+                                max="10"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option range-option">
+                            <span>Font Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormFontSize"
+                                data-class=".cform-custom-input"
+                                min="10"
+                                max="30"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-content tab-content-right" id="content6-2">
+                      <div class="form-code">
+                        <div class="code-container">
+                          <pre><code class="language-html">&lt;input class=&quot;cform cform-custom-input&quot; type=&quot;email&quot; placeholder=&quot;disabled&quot; disabled=&quot;true&quot; value=&quot;disabled&quot;/&gt;
+&lt;input class=&quot;cform cform-custom-input invalid&quot; type=&quot;number&quot; placeholder=&quot;input invalid&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-input&quot; type=&quot;password&quot; placeholder=&quot;password&quot; name=&quot;password&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-input focus&quot; type=&quot;text&quot; placeholder=&quot;Focused State&quot; /&gt;
+
+&lt;input list=&quot;tech&quot; class=&quot;select cform cform-custom-input&quot; placeholder=&quot;input list&quot; /&gt;
+
+&lt;datalist id=&quot;tech&quot;&gt;
+  &lt;option value=&quot;HTML&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;CSS&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;Javascript&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;Gulp&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;SASS&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;PostCSS&quot;&gt;&lt;/option&gt;
+  &lt;option value=&quot;Git&quot;&gt;&lt;/option&gt;
+&lt;/datalist&gt;
+
+&lt;input class=&quot;cform cform-custom-input&quot; type=&quot;number&quot; placeholder=&quot;number&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-input&quot; type=&quot;date&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-input focus-ring&quot; type=&quot;datetime-local&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-input&quot; type=&quot;month&quot; /&gt;
+
+
+&lt;input class=&quot;cform cform-custom-input&quot; name=&quot;login&quot; type=&quot;text&quot; placeholder=&quot;search&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-input&quot; type=&quot;tel&quot; placeholder=&quot;phone&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-input&quot; type=&quot;time&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-input&quot; type=&quot;week&quot; /&gt;
+
+&lt;select class=&quot;cform cform-custom-input&quot; name=&quot;&quot; id=&quot;id&quot;&gt;
+  &lt;option value=&quot;select&quot;&gt;
+    Select
+  &lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 1&lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 2&lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 3&lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 4&lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 5&lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 6&lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 7&lt;/option&gt;
+&lt;/select&gt;
+      &lt;fieldset class=&quot;cform cform-custom-input&quot;&gt;
+  &lt;legend&gt;Fieldset Legend&lt;/legend&gt;
+  &lt;input type=&quot;text&quot; tabindex=&quot;1&quot; class=&quot;cform&quot; /&gt;
+&lt;/fieldset&gt;
+
+&lt;textarea class=&quot;cform cform-custom-input&quot; name=&quot;&quot; rows=&quot;5&quot; placeholder=&quot;text&quot;&gt;
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+&lt;/textarea&gt;
+
+&lt;select class=&quot;cform cform-custom-input&quot; name=&quot;&quot; id=&quot;&quot; multiple&gt;
+  &lt;option value=&quot;select&quot;&gt;select 1&lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 2&lt;/option&gt;
+  &lt;option value=&quot;select&quot;&gt;select 3&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Default Checkbox-->
+              <div class="form-wrap">
+                <div class="forms-item">
+                  <span class="forms-item-title">Default Checkboxes <span>/</span>Default Radio Buttons</span>
+                  <div class="forms-item-in">
+                    <input class="cform cform-custom-checkbox-radio" type="checkbox" disabled />
+                    <input class="cform cform-custom-checkbox-radio" type="checkbox" />
+                    <input class="cform cform-custom-checkbox-radio" type="checkbox" checked />
+                    <input class="cform cform-custom-checkbox-radio" type="checkbox" checked disabled />
+
+                    <input class="cform cform-custom-checkbox-radio" type="radio" disabled />
+                    <input class="cform cform-custom-checkbox-radio" type="radio" name="radio" />
+                    <input class="cform cform-custom-checkbox-radio" type="radio" name="radio" checked />
+                    <input class="cform cform-custom-checkbox-radio" type="radio" name="radio2" checked disabled />
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab-buttons">
+                    <button class="tab-button" data-target="content3-1">Customize <strong>this</strong> form group</button>
+                    <button class="tab-button" data-target="content3-2">Show html</button>
+                  </div>
+                  <div class="tab-content-wrap">
+                    <div class="tab-content" id="content3-1">
+                      <div class="customize-container">
+                        <div class="customize-container-in">
+                          <div class="sidebar-option color-option">
+                            <span>Accent Color:</span>
+                            <div class="option">
+                              <button
+                                data-class=".cform-custom-checkbox-radio"
+                                data-id="cFormAccentColor"
+                                class="input-color"
+                              ></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Background Color:</span>
+                            <div class="option">
+                              <button
+                                data-class=".cform-custom-checkbox-radio"
+                                data-id="cFormAccent"
+                                class="input-color"
+                              ></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="customize-container-in">
+                          <div class="sidebar-option range-option">
+                            <span>Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormCheckboxWidth"
+                                data-class=".cform-custom-checkbox-radio"
+                                min="6"
+                                max="45"
+                                value="26"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Border Radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-custom-checkbox-radio"
+                                min="0"
+                                max="20"
+                                value="5"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-content tab-content-right" id="content3-2">
+                      <div class="form-code">
+                        <div class="code-container">
+                          <pre><code class="language-html">
+&lt;input class=&quot;cform cform-custom-checkbox-radio&quot; type=&quot;checkbox&quot; disabled /&gt;
+&lt;input class=&quot;cform cform-custom-checkbox-radio&quot; type=&quot;checkbox&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-checkbox-radio&quot; type=&quot;checkbox&quot; checked /&gt;
+&lt;input class=&quot;cform cform-custom-checkbox-radio&quot; type=&quot;checkbox&quot; checked disabled /&gt;
+
+&lt;input class=&quot;cform cform-custom-checkbox-radio&quot; type=&quot;radio&quot; disabled /&gt;
+&lt;input class=&quot;cform cform-custom-checkbox-radio&quot; type=&quot;radio&quot; name=&quot;radio&quot; /&gt;
+&lt;input class=&quot;cform cform-custom-checkbox-radio&quot; type=&quot;radio&quot; name=&quot;radio&quot; checked /&gt;
+&lt;input class=&quot;cform cform-custom-checkbox-radio&quot; type=&quot;radio&quot; name=&quot;radio2&quot; checked disabled /&gt;
+
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Custom Checkbox-->
+              <div class="form-wrap">
+                <div class="forms-item">
+                  <span class="forms-item-title">Custom Checkboxes</span>
+                  <div class="forms-item-in">
+                    <label class="cform custom-checkbox cform-custom-checkbox">
+                      <input type="checkbox" disabled />
+                    </label>
+                    <label class="cform custom-checkbox cform-custom-checkbox">
+                      <input type="checkbox" />
+                    </label>
+                    <label class="cform custom-checkbox cform-custom-checkbox">
+                      <input type="checkbox" checked />
+                    </label>
+                    <label class="cform custom-checkbox cform-custom-checkbox">
+                      <input type="checkbox" checked disabled />
+                    </label>
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab-buttons">
+                    <button class="tab-button" data-target="content4-1">Customize <strong>this</strong> form group</button>
+                    <button class="tab-button" data-target="content4-2">Show html</button>
+                  </div>
+                  <div class="tab-content-wrap">
+                    <div class="tab-content" id="content4-1">
+                      <div class="customize-container">
+                        <div class="customize-container-in">
+                          <div class="sidebar-option color-option">
+                            <span>Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-checkbox" data-id="cFormAccent" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="customize-container-in">
+                          <div class="sidebar-option range-option">
+                            <span>Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormCheckboxWidth"
+                                data-class=".cform-custom-checkbox"
+                                min="6"
+                                max="35"
+                                value="26"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Border Radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-custom-checkbox"
+                                min="0"
+                                max="15"
+                                value="5"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-content tab-content-right" id="content4-2">
+                      <div class="form-code">
+                        <div class="code-container">
+                          <pre><code class="language-html">
+&lt;label class=&quot;cform custom-checkbox cform-custom-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; disabled /&gt;
+&lt;/label&gt;
+&lt;label class=&quot;cform custom-checkbox cform-custom-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; /&gt;
+&lt;/label&gt;
+&lt;label class=&quot;cform custom-checkbox cform-custom-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; checked /&gt;
+&lt;/label&gt;
+&lt;label class=&quot;cform custom-checkbox cform-custom-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; checked disabled /&gt;
+&lt;/label&gt;
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Switch-->
+              <div class="form-wrap">
+                <div class="forms-item">
+                  <span class="forms-item-title">Switch</span>
+                  <div class="forms-item-in">
+                    <div class="cform-switch cform-switch-big cform-custom-switch">
+                      <input type="checkbox" id="switch-1" checked />
+                      <label for="switch-1"></label>
+                    </div>
+                    <div class="cform-switch cform-custom-switch">
+                      <input type="checkbox" id="switch-2" />
+                      <label for="switch-2"></label>
+                    </div>
+                    <div class="cform-switch cform-switch-small cform-custom-switch">
+                      <input type="checkbox" id="switch-3" />
+                      <label for="switch-3"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab-buttons">
+                    <button class="tab-button" data-target="content5-1">Customize <strong>this</strong> form group</button>
+                    <button class="tab-button" data-target="content5-2">Show html</button>
+                  </div>
+                  <div class="tab-content-wrap">
+                    <div class="tab-content" id="content5-1">
+                      <div class="customize-container flex-5-4">
+                        <div class="customize-container-in">
+                          <div class="sidebar-option color-option">
+                            <span>Active Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-switch" data-id="cFormAccent" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Inactive Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-switch" data-id="cFormBg" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Active Label:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-switch" data-id="cFormAccentColor" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Inactive Label:</span>
+                            <div class="option">
+                              <button
+                                data-class=".cform-custom-switch"
+                                data-id="cFormTextPlaceholderColor"
+                                class="input-color"
+                              ></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="customize-container-in">
+                          <div class="sidebar-option range-option">
+                            <span>Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormCheckboxWidth"
+                                data-class=".cform-custom-switch"
+                                min="6"
+                                max="35"
+                                value="26"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Border Radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-custom-switch"
+                                min="0"
+                                max="20"
+                                value="5"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-content tab-content-right" id="content5-2">
+                      <div class="form-code">
+                        <div class="code-container">
+                          <pre><code class="language-html">
+&lt;div class=&quot;cform-switch cform-switch-big cform-custom-switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-1&quot; checked /&gt;
+  &lt;label for=&quot;switch-1&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;cform-switch cform-custom-switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-2&quot; /&gt;
+  &lt;label for=&quot;switch-2&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;cform-switch cform-switch-small cform-custom-switch&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;switch-3&quot; /&gt;
+  &lt;label for=&quot;switch-3&quot;&gt;&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Radio Groups-->
+              <div class="form-wrap">
+                <div class="forms-item">
+                  <span class="forms-item-title">Radio Group <span>/</span> Radio Group Small</span>
+                  <div class="forms-item-in">
+                    <div class="radio-group cform-radio-group">
+                      <input type="radio" id="option-one" name="selector" checked />
+                      <label for="option-one">Html</label>
+                      <input type="radio" id="option-two" name="selector" />
+                      <label for="option-two">Css</label>
+                      <input type="radio" id="option-three" name="selector" />
+                      <label for="option-three">Javascript</label>
+                    </div>
+                    <div class="radio-group radio-group-small cform-radio-group">
+                      <input type="radio" id="option-one3" name="selector3" checked />
+                      <label for="option-one3">Html</label>
+                      <input type="radio" id="option-two3" name="selector3" />
+                      <label for="option-two3">Css</label>
+                      <input type="radio" id="option-three3" name="selector3" />
+                      <label for="option-three3">Javascript</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab-buttons">
+                    <button class="tab-button" data-target="content1-1">Customize <strong>this</strong> form group</button>
+                    <button class="tab-button" data-target="content1-2">Show html</button>
+                  </div>
+                  <div class="tab-content-wrap">
+                    <div class="tab-content" id="content1-1">
+                      <div class="customize-container flex-5-4">
+                        <div class="customize-container-in">
+                          <div class="sidebar-option color-option">
+                            <span>Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-radio-group" data-id="cFormBg" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Active Item Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-radio-group" data-id="cFormAccent" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Text Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-radio-group" data-id="cFormTextColor" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Active Item Text Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-radio-group" data-id="cFormAccentColor" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="customize-container-in">
+                          <div class="sidebar-option range-option">
+                            <span>Font Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormFontSize"
+                                data-class=".cform-radio-group"
+                                min="6"
+                                max="20"
+                                value="17"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Padding:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormPadding"
+                                data-class=".cform-radio-group"
+                                min="0"
+                                max="20"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Border-radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-radio-group"
+                                min="0"
+                                max="20"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-content tab-content-right" id="content1-2">
+                      <div class="form-code">
+                        <div class="code-container">
+                          <pre><code class="language-html">&lt;div class="radio-group"&gt;
+    &lt;input type="radio" id="option-one3" name="selector3" checked /&gt;
+    &lt;label for="option-one3"&gt;Html&lt;/label&gt;
+    &lt;input type="radio" id="option-two3" name="selector3" /&gt;
+    &lt;label for="option-two3"&gt;Css&lt;/label&gt;
+    &lt;input type="radio" id="option-three3" name="selector3" /&gt;
+    &lt;label for="option-three3"&gt;Javascript&lt;/label&gt;
+&lt;/div&gt;</code>
+<code class="language-html">&lt;div class="radio-group radio-group-small"&gt;
+    &lt;input type="radio" id="option-one3" name="selector3" checked /&gt;
+    &lt;label for="option-one3"&gt;Html&lt;/label&gt;
+    &lt;input type="radio" id="option-two3" name="selector3" /&gt;
+    &lt;label for="option-two3"&gt;Css&lt;/label&gt;
+    &lt;input type="radio" id="option-three3" name="selector3" /&gt;
+    &lt;label for="option-three3"&gt;Javascript&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- input type range-->
+              <div class="form-wrap">
+                <div class="forms-item">
+                  <span class="forms-item-title">Input type Range</span>
+                  <div class="forms-item-in">
+                    <div class="cform-custom-range w-50">
+                      <input type="range" class="cform" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab-buttons">
+                    <button class="tab-button" data-target="content2-1">Customize <strong>this</strong> form group</button>
+                    <button class="tab-button" data-target="content2-2">Show html</button>
+                  </div>
+                  <div class="tab-content-wrap">
+                    <div class="tab-content" id="content2-1">
+                      <div class="customize-container">
+                        <div class="customize-container-in">
+                          <div class="sidebar-option color-option">
+                            <span>Track Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-range" data-id="cFormBg" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Thumb Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-range" data-id="cFormAccent" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="customize-container-in">
+                          <div class="sidebar-option range-option">
+                            <span>Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormCheckboxWidth"
+                                data-class=".cform-custom-range"
+                                min="6"
+                                max="50"
+                                value="26"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-custom-range"
+                                min="0"
+                                max="30"
+                                value="26"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Border width:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormBorderWidth"
+                                data-class=".cform-custom-range"
+                                min="0"
+                                max="5"
+                                value="0"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-content tab-content-right" id="content2-2">
+                      <div class="form-code">
+                        <div class="code-container">
+                          <pre><code class="language-html">
+&lt;input type=&quot;range&quot; class=&quot;cform cform-custom-range&quot; /&gt;
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buttons -->
+              <div class="form-wrap">
+                <div class="forms-item">
+                  <span class="forms-item-title">Buttons</span>
+
+                  <div class="forms-item-in-btns">
+                    <div class="forms-item-in flex-wrap">
+                      <div class="forms-item-in-btns-title">Colors:</div>
+                      <button class="cform-btn cform-custom-btn cform-btn">Default</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-primary">Primary</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-secondary">Secondary</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-info">Info</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-error">Error</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-accent">Accent</button>
+                    </div>
+                    <div class="forms-item-in flex-wrap">
+                      <div class="forms-item-in-btns-title">Sizes:</div>
+                      <button class="cform-btn cform-custom-btn cform-btn-xl">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-l">Button</button>
+                      <button class="cform-btn cform-custom-btn">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-sm">Button</button>
+                    </div>
+                    <div class="forms-item-in flex-wrap">
+                      <div class="forms-item-in-btns-title">Rounded:</div>
+                      <button class="cform-btn cform-custom-btn cform-btn-xl cform-btn-rounded">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-l cform-btn-rounded">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-rounded">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-sm cform-btn-rounded">Button</button>
+                    </div>
+
+                    <div class="forms-item-in flex-wrap">
+                      <div class="forms-item-in-btns-title">Outlined:</div>
+                      <button class="cform-btn cform-custom-btn cform-btn-xl cform-btn-outlined cform-btn-primary">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-l cform-btn-outlined cform-btn-secondary">
+                        Button
+                      </button>
+                      <button class="cform-btn cform-custom-btn cform-btn-outlined cform-btn-info">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-outlined cform-btn-error">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-sm cform-btn-outlined cform-btn-accent">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-sm cform-btn-outlined">Button</button>
+                    </div>
+
+                    <div class="forms-item-in flex-wrap">
+                      <div class="forms-item-in-btns-title">Full Width &amp; Link:</div>
+                      <button class="cform-btn cform-btn-primary cform-custom-btn cform-btn-block">Button</button>
+                      <button class="cform-btn cform-custom-btn cform-btn-link">Button</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab-buttons">
+                    <button class="tab-button" data-target="content7-1">Customize <strong>this</strong> form group</button>
+                    <button class="tab-button" data-target="content7-2">Show html</button>
+                  </div>
+                  <div class="tab-content-wrap">
+                    <div class="tab-content" id="content7-1">
+                      <div class="customize-container flex-5-4">
+                        <div class="customize-container-in">
+                          <div class="sidebar-option color-option">
+                            <span>Background for Default button:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormButtonDefault" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Color for Default button:</span>
+                            <div class="option">
+                              <button
+                                data-class=".cform-custom-btn"
+                                data-id="cFormButtonDefaultText"
+                                class="input-color"
+                              ></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option color-option">
+                            <span>Primary Button Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormButtonPrimary" class="input-color"></button>
+                            </div>
+
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Primary Button Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormPrimaryColor" class="input-color"></button>
+                            </div>
+
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Secondary Button Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormButtonSecondary" class="input-color"></button>
+                            </div>
+
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Secondary Button Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormSecondaryColor" class="input-color"></button>
+                            </div>
+
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Info Button Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormBtnInfo" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Info Button Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormInfoColor" class="input-color"></button>
+                            </div>
+
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Error Button Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormError" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Error Button Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormErrorColor" class="input-color"></button>
+                            </div>
+
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Accent Button Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormAccent" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>Accent Button Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-btn" data-id="cFormAccentColorBtn" class="input-color"></button>
+                            </div>
+
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="customize-container-in">
+                          <div class="sidebar-option range-option">
+                            <span>Padding:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormPadding"
+                                data-class=".cform-custom-btn"
+                                min="0"
+                                max="35"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Font Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormFontSize"
+                                data-class=".cform-custom-btn"
+                                min="10"
+                                max="25"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>Border Radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-custom-btn"
+                                min="0"
+                                max="40"
+                                value="5"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-content tab-content-right" id="content7-2">
+                      <div class="form-code">
+                        <div class="code-container">
+                          <pre><code class="language-html">
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn&quot;&gt;Default&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-info&quot;&gt;Info&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-error&quot;&gt;Error&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-accent&quot;&gt;Accent&lt;/button&gt;
+
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-xl&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-l&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-sm&quot;&gt;Button&lt;/button&gt;
+
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-xl cform-btn-rounded&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-l cform-btn-rounded&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-rounded&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-sm cform-btn-rounded&quot;&gt;Button&lt;/button&gt;
+
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-xl cform-btn-outlined cform-btn-primary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-l cform-btn-outlined cform-btn-secondary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-outlined cform-btn-info&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-outlined cform-btn-error&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-sm cform-btn-outlined cform-btn-accent&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-sm cform-btn-outlined&quot;&gt;Button&lt;/button&gt;
+
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-block&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;cform-btn cform-custom-btn cform-btn-link&quot;&gt;Button&lt;/button&gt;
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Files -->
+              <div class="form-wrap">
+                <div class="forms-item">
+                  <span class="forms-item-title">File Upload <span>/</span> Color Picker</span>
+                  <div class="forms-item-in">
+                    <input class="cform cform-custom-file" type="file" />
+                    <input type="color" class="cform cform-custom-picker" />
+                  </div>
+                </div>
+                <div class="tabs">
+                  <div class="tab-buttons">
+                    <button class="tab-button" data-target="content8-1">Customize <strong>this</strong> form group</button>
+                    <button class="tab-button" data-target="content8-2">Show html</button>
+                  </div>
+                  <div class="tab-content-wrap">
+                    <div class="tab-content" id="content8-1">
+                      <div class="customize-container">
+                        <div class="customize-container-in">
+                          <div class="sidebar-option color-option">
+                            <span>File Background:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-file" data-id="cFormAccent" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>File Text Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-file" data-id="cFormAccentColor" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option color-option">
+                            <span>File Label Color:</span>
+                            <div class="option">
+                              <button data-class=".cform-custom-file" data-id="cFormTextColor" class="input-color"></button>
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="customize-container-in">
+                          <div class="sidebar-option range-option">
+                            <span>File Padding:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormPadding"
+                                data-class=".cform-custom-file"
+                                min="0"
+                                max="25"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>File Border Radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-custom-file"
+                                min="0"
+                                max="20"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="sidebar-option range-option">
+                            <span>File Font Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormFontSize"
+                                data-class=".cform-custom-file"
+                                min="0"
+                                max="40"
+                                value="5"
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option range-option">
+                            <span>Picker Size:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormCheckboxWidth"
+                                data-class=".cform-custom-picker"
+                                min="20"
+                                max="55"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="sidebar-option range-option">
+                            <span>Picker Border-radius:</span>
+                            <div class="option">
+                              <input
+                                type="range"
+                                data-id="cFormRadius"
+                                data-class=".cform-custom-picker"
+                                min="0"
+                                max="30"
+                                value=""
+                                class="cform"
+                              />
+                            </div>
+                            <div class="reset-area">
+                              <button class="reset-btn cform-btn cform-btn-sm cform-btn-info">
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-content tab-content-right" id="content8-2">
+                      <div class="form-code">
+                        <div class="code-container">
+                          <pre><code class="language-html">&lt;div class=&quot;cform-custom-checkbox-radio&quot;&gt;
+    &lt;input class=&quot;cform&quot; type=&quot;checkbox&quot; disabled /&gt;
+    &lt;input class=&quot;cform&quot; type=&quot;checkbox&quot; /&gt;
+    &lt;input class=&quot;cform&quot; type=&quot;checkbox&quot; checked /&gt;
+    &lt;input class=&quot;cform&quot; type=&quot;checkbox&quot; checked disabled /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;cform-custom-checkbox-radio&quot;&gt;
+    &lt;input class=&quot;cform&quot; type=&quot;radio&quot; disabled /&gt;
+    &lt;input class=&quot;cform&quot; type=&quot;radio&quot; name=&quot;radio&quot; /&gt;
+    &lt;input class=&quot;cform&quot; type=&quot;radio&quot; name=&quot;radio&quot; checked /&gt;
+    &lt;input class=&quot;cform&quot; type=&quot;radio&quot; name=&quot;radio2&quot; checked disabled /&gt;
+&lt;/div&gt;
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="code-sidebar">
+              <div class="code-sidebar-title">Copy Variables</div>
+              <div class="code-sidebar-desc">
+                Variables should be inserted after linking the main style file (css-formalize.css).
+              </div>
+              <div class="code-container">
+                <div class="code code-css">
+                  <pre><span class="code-title">/* CSS variables: */</span><code class="language-css"
+                                                                               data-id="variablesOutput"></code></pre>
+                </div>
+                <div class="code code-html">
+                  <pre><span class="code-title">&lt;!-- Include in &lt;head&gt; if use dark theme: --&gt;
+</span><code class="language-html" data-id="metaOutput"></code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+
+    <!--    tootlips-->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

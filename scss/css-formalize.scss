@@ -1,0 +1,906 @@
+
+:root {
+  --cform-checkbox-width: 26px;
+  --cform-radius: 10px;
+  --cform-font-size: 16px;
+  --cform-padding: 5px;
+  --cform-border-width: 0px;
+  --cform-border-width-focus: 3px;
+  --cform-border-blur: 0px;
+
+  --cform-focus-bg: rgba(255,255,255,1);
+  --cform-btn-default-text: rgba(75, 50, 107, 0.75);
+  --demo-bg: rgba(255, 255, 255, 0);
+  --cform-accent-color: rgba(255, 255, 255, 1);
+  --cform-border-focus-color: rgba(199, 188, 212, 1.00);
+  --cform-bg: rgba(240, 239, 242, 1.00);
+  --cform-text-color: rgba(75, 50, 107, 1.00);
+  --cform-error: rgba(232, 112, 112, 1.00);
+  --cform-accent: rgba(104, 73, 145, 1.00);
+  --cform-border-color: rgba(199, 188, 212, 0.8);
+
+  --cform-legend: rgba(104, 73, 145, 1.00);
+
+  --cform-text-placeholder-color: rgba(75, 50, 107, 0.5);
+  --cform-btn-default: var(--cform-bg);
+  --cform-accent-color-btn: var(--cform-accent-color);
+  --cform-error-color: var(--cform-accent-color);
+  --cform-info-color: var(--cform-accent-color);
+  --cform-secondary-color: var(--cform-accent-color);
+  --cform-primary-color: var(--cform-accent-color);
+  --cform-btn-primary: rgba(104, 73, 145, 0.7);
+
+  --cform-btn-secondary: rgba(255, 100, 134, 1.00);
+  --cform-btn-info: rgba(251, 195, 111, 1);
+}
+
+.hide-input {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+  box-shadow: unset !important;
+  &:focus {
+    box-shadow: unset !important;
+  }
+}
+
+.cform:is(
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [type='file'],
+  select[multiple],
+  textarea,
+  select,
+  input[list]) {
+  appearance: none;
+  border: unset;
+  font-size: clamp(12px, var(--cform-font-size), 20px);
+  min-height: clamp(10px, calc(var(--cform-font-size)), 60px);
+  border-radius: var(--cform-radius);
+  padding: var(--cform-padding) calc(var(--cform-padding) * 3);
+  padding-block: clamp(1px,calc(var(--cform-padding) * 2.5), 15px) ;
+  padding-inline: clamp(5px, calc(var(--cform-padding) * 4 ), 20px);
+  color: var(--cform-text-color);
+  background-color: var(--cform-bg);
+  box-shadow:  0 0 0 var(--cform-border-width) var(--cform-border-color);
+  print-color-adjust: exact;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  display: inline-block;
+  font-weight: 500;
+  transition: filter 0.3s linear, box-shadow 0.35s ease-in-out, background-color 0.35s ease-in-out;
+  max-width: 100%;
+  &[disabled] {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.6;
+    color: color-mix(in srgb, var(--cform-text-color) 85%, transparent);
+  }
+  &:focus,
+  &.focus,
+  &:focus-within,
+  &:focus-visible {
+    background-color: var(--cform-focus-bg);
+    outline: unset;
+    box-shadow: 0 0 var(--cform-border-blur) calc(var(--cform-border-width-focus) + var(--cform-border-width)) var(--cform-border-focus-color)
+  }
+  &::-webkit-inner-spin-button {
+    margin-right: 0;
+    padding: 10px 5px;
+  }
+  &:invalid,
+  &.invalid {
+    box-shadow: 0 0 0 clamp(1px, calc(var(--cform-border-width-focus) + var(--cform-border-width)), 5px)  var(--cform-error);
+    color: var(--cform-error);
+    &::placeholder {
+      color: var(--cform-error);
+    }
+  }
+}
+
+
+.cform:is(textarea, select[multiple]){
+    line-height: 1.2;
+    scrollbar-width: thin;
+    border-radius: clamp(0px, var(--cform-radius), 15px);
+    position: relative;
+  min-height: 50px;
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: 8px;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--cform-text-placeholder-color);
+      border-radius: 50em;
+    }
+    &::-webkit-scrollbar-corner,
+    &::-webkit-resizer {
+      display: none;
+      appearance: none;
+    }
+  }
+
+.cform:is(textarea) {
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(315deg,  var(--cform-text-color) 50%, transparent 50%);
+    background-position: calc(100% - 8px) calc(100% - 8px);
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+  }
+}
+
+.cform:is(input, textarea)::placeholder {
+  color: color-mix(in srgb, var(--cform-text-placeholder-color) 75%, transparent);
+  font-weight: 200
+}
+
+.cform:is(select[multiple]) {
+  line-height: 20px;
+  option {
+    padding: 3px 5px;
+    margin: 1px 0;
+    &:checked {
+      background-color: var(--cform-accent);
+      color: var(--cform-accent-color);
+    }
+  }
+}
+
+
+.cform:is([type=date], [type=datetime-local],[type=month],[type=time], [type=week]  )::-webkit-datetime-edit {
+  color: var(--cform-text-color);
+}
+.cform {
+  &:focus-within::-webkit-calendar-picker-indicator {
+    opacity: 0.8;
+  }
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.2s linear;
+    scale: 1.2;
+    &:hover {
+      opacity: 0.8
+      }
+  }
+}
+
+
+
+
+.cform {
+  &::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  &::-webkit-date-and-time-value {
+    min-height: 1.5em;
+  }
+}
+
+.cform:is(input[list]) {
+  //display: none;
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
+}
+
+
+.cform:is(select:not([multiple]), input[list]) {
+  padding-right: clamp(30px,calc(var(--cform-padding) * 9 ), 60px) ;
+  background-image:
+
+          linear-gradient(45deg, transparent 50%, color-mix(in srgb, var(--cform-text-placeholder-color) 70%, transparent) 50%),
+          linear-gradient(135deg,  color-mix(in srgb, var(--cform-text-placeholder-color) 70%, transparent) 50%, transparent 50%);
+          //linear-gradient(to right, var(--cform-text-placeholder-color), var(--cform-text-placeholder-color));
+  background-position:
+          calc(100% - clamp(15px, calc(var(--cform-padding) + 13px ), 25px) ) 50%,
+          calc(100% - clamp(10px, calc(var(--cform-padding) + 8px ), 20px) ) 50%;
+          //calc(100% - clamp(25px, calc(var(--cform-padding) + 30px ) , 45px));
+  background-size:
+          5px 5px,
+          5px 5px;
+          //1px 55%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+
+.cform:is(textarea) {
+  resize: vertical;
+  min-height: clamp(50px, 3rem, 99999px);
+}
+
+.cform {
+  &[type="search"]::-webkit-search-decoration,
+  &[type="search"]::-webkit-search-cancel-button,
+  &[type="search"]::-webkit-search-results-button,
+  &[type="search"]::-webkit-search-results-decoration{
+    display: none !important;
+    appearance: none !important;
+    opacity: 0 !important;
+  }
+}
+
+.cform {
+  &[type="checkbox"],
+  &[type="radio"] {
+    appearance: none;
+    padding: 0;
+    print-color-adjust: exact;
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    user-select: none;
+    flex-shrink: 0;
+    height: clamp(22px, var(--cform-checkbox-width), 40px);
+    width: clamp(22px, var(--cform-checkbox-width), 40px);
+    cursor: pointer;
+    border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 8px);
+    margin: 0;
+    background-color: var(--cform-accent);
+    background-size: 0;
+    border-color: transparent;
+    box-shadow: unset;
+    transition: background-size 0.15s ease-in-out, box-shadow 0.3s linear;
+    &:focus-visible {
+      outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+      outline-offset: 2px
+    }
+    &[disabled] {
+      cursor: default;
+      opacity: 0.5;
+      box-shadow: unset;
+    }
+    }
+  }
+
+.cform {
+  &[type="checkbox"] {
+    position: relative;
+    &:before {
+      content: "";
+      transition: scale 0.2s ease-in-out;
+      border-left: 0 solid var(--cform-accent-color);
+      border-bottom: 0 solid var(--cform-accent-color);
+      border-left-width: clamp(2px, var(--cform-border-width), 3px);
+      border-bottom-width: clamp(2px, var(--cform-border-width), 3px);
+      position: absolute;
+      width: clamp(14px, calc(var(--cform-checkbox-width) / 2), 28px);
+      height: clamp(9px, calc(var(--cform-checkbox-width) / 4), 23px);
+      top: 50%;
+      left: 50%;
+      transform: rotate(-50deg) translateY(-60%) translateX(-40%);
+      transform-origin: left top;
+      scale: 0
+    }
+    &:checked {
+      border-color: transparent;
+      box-shadow: unset;
+      &:before {
+        scale: 1;
+
+      }
+    }
+  }
+}
+
+.cform {
+  &[type="radio"] {
+    border-radius: 100%;
+    height: clamp(20px, calc(var(--cform-checkbox-width) - 4px), 40px);
+    width: clamp(20px, calc(var(--cform-checkbox-width) - 4px), 40px);
+    position: relative;
+    &:before {
+      transition: scale 0.25s ease-in-out;
+      content: "";
+      height: clamp(10px, calc(var(--cform-checkbox-width) - 16px), 15px);
+      width: clamp(10px, calc(var(--cform-checkbox-width) - 16px), 15px);
+      border-radius: 100%;
+      background: var(--cform-accent-color);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      scale: 0;
+      transform-origin: top left
+    }
+    &:checked {
+      &:before {
+        scale: 1
+      }
+    }
+  }
+}
+
+
+
+
+// custom checkbox
+.cform-switch {
+  --switch-width: clamp(15px, calc(var(--cform-checkbox-width) - 6px), 30px);
+  overflow: hidden;
+  padding: 4px;
+  display: inline-flex;
+  align-items: flex-start;
+  //outline: 1px solid red;
+  input[type="checkbox"] {
+    @extend .hide-input;
+    & + label {
+    cursor: pointer;
+    width: calc(var(--switch-width) * 2.3);
+    height: calc(var(--switch-width) + 4px);
+    max-width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: calc(var(--cform-radius) + 2px);
+    position: relative;
+    vertical-align: bottom;
+    background-color: color-mix(in srgb, var(--cform-bg) 90%, #000);
+    transition: background 0.2s ease-in-out;
+    &:after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 2px;
+      width: var(--switch-width);
+      height: var(--switch-width);
+      top: 2px;
+      background-color: var(--cform-text-placeholder-color);
+      border-radius: var(--cform-radius);
+      box-sizing: border-box;
+      transition: left 0.2s ease-in-out;
+    }
+  }
+    &:checked + label {
+      background-color: var(--cform-accent);
+      &:after {
+        left: calc(100% - calc(var(--switch-width) + 2px));
+        background-color: var(--cform-accent-color);
+      }
+    }
+  }
+  &:has(:focus-visible) {
+    &:focus-within {
+      label {
+        outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+        outline-offset: 2px
+      }
+    }
+  }
+  &:has([disabled]) {
+    opacity: 0.5
+  }
+}
+
+.cform::-webkit-calendar-picker-indicator:focus-visible {
+  outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+  outline-offset: 2px;
+  border-radius:  clamp(0px, calc(var(--cform-radius) / 2), 5px);
+}
+
+
+.cform-switch-small {
+  --switch-width: clamp(10px, calc(var(--cform-checkbox-width) - 15px), 20px);
+}
+.cform-switch-big {
+  --switch-width: clamp(20px, calc(var(--cform-checkbox-width) - 2px ), 40px);
+}
+
+
+
+.radio-group {
+  border-radius: var(--cform-radius);
+  overflow: hidden;
+  background: var(--cform-bg);
+  padding: clamp(3px, calc(var(--cform-padding)), 8px);
+  display: inline-flex !important;
+  user-select: none;
+  color: var(--cform-text-color);
+  input[type=radio] {
+    @extend .hide-input;
+    &:checked + label {
+    color: var(--cform-accent-color);
+    background: var(--cform-accent);
+  }
+    &:focus + label {
+      box-shadow: 0 0 0 1px var(--form-color) !important;
+    }
+  }
+  &:has(:focus-visible) {
+    &:focus-within {
+      outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+      outline-offset: 2px
+    }
+  }
+  label {
+    color: var(--gray-65);
+    cursor: pointer;
+    padding-block: clamp(3px,calc(var(--cform-padding) + 3px),10px) ;
+    padding-inline: clamp(10px, calc(var(--cform-padding) * 4),20px) ;
+    transition: background 0.1s ease-in-out, color 0.2s linear;
+    border-radius: calc(var(--cform-radius) - 2px);
+    white-space: nowrap;
+    font-size:  clamp(12px, calc(var(--cform-font-size) - 1px), 20px);
+
+    &:hover {
+      color: var(--gray-90);
+    }
+
+  }
+  &.radio-group-small {
+    padding: clamp(3px, calc(var(--cform-padding) - 1px), 6px);
+    label {
+      padding-block: clamp(3px,calc(var(--cform-padding) ),5px) ;
+      padding-inline: clamp(10px, calc(var(--cform-padding) + 10px),15px);
+      font-size:  clamp(12px, calc(var(--cform-font-size) - 3px), 18px);
+    }
+  }
+
+}
+
+
+
+input.cform:-webkit-autofill {
+  box-shadow: inset 0 0 0 100px var(--cform-bg);
+  &:focus {
+    box-shadow: inset 0 0 0 100px var(--cform-bg), 0 0 var(--cform-border-blur) calc(var(--cform-border-width-focus) + var(--cform-border-width)) var(--cform-border-focus-color);
+
+  }
+}
+
+input[type=range].cform {
+  appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background: unset;
+  outline: none;
+}
+@mixin range-track {
+  height: clamp(10px, calc(var(--cform-checkbox-width) / 2 + var(--cform-border-width)), 30px);
+  background: var(--cform-bg);
+  border: var(--cform-border-width) solid color-mix(in srgb, var(--cform-bg) 97%, #000000);
+  border-radius: clamp(0px, calc(var(--cform-radius) / 2), 20px);
+  appearance: none;
+  box-sizing: border-box;
+  &:focus {
+    outline: 0;
+  }
+  &:focus-visible {
+    outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+    outline-offset: 2px
+  }
+}
+
+@mixin range-thumb {
+  appearance: none;
+  border: none;
+  height: clamp(10px, calc(var(--cform-checkbox-width) / 2 + var(--cform-border-width)), 30px);
+  width: clamp(10px, calc(var(--cform-checkbox-width) / 2 + var(--cform-border-width)), 30px);
+  cursor: pointer;
+  border-radius: clamp(0px, calc(var(--cform-radius) / 2.5), 20px);
+  background: var(--cform-accent);
+  margin-top: calc(0px - var(--cform-border-width));
+  scale: 1.4;
+}
+
+input[type="range"].cform {
+  &::-webkit-slider-runnable-track {
+    @include range-track;
+  }
+  &::-moz-range-track {
+    @include range-track;
+  }
+  &::-webkit-slider-thumb {
+    @include range-thumb;
+  }
+  &::-moz-range-thumb {
+    @include range-thumb;
+  }
+}
+
+input[type="range"].cform {
+  &:focus-visible {
+    &::-webkit-slider-runnable-track {
+      outline: 3px solid var(--cform-text-placeholder-color);
+      outline-offset: 4px
+    }
+    &::-moz-range-track {
+      outline: 3px solid var(--cform-text-placeholder-color);
+      outline-offset: 4px
+    }
+  }
+
+}
+
+
+// custom checkbox 2
+.cform.custom-checkbox {
+  position: relative;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    position: relative;
+    cursor: pointer;
+    height: clamp(16px, calc(var(--cform-checkbox-width) - clamp(2px, var(--cform-border-width), 100px)), 40px);
+    width: clamp(16px, calc(var(--cform-checkbox-width) - clamp(2px, var(--cform-border-width), 100px)), 40px);
+    appearance: none;
+    outline: 0;
+    box-sizing: border-box;
+    &[disabled] {
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+    }
+    &:focus {
+      outline: 0
+    }
+    &:focus-visible{
+      &:after {
+        outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+        outline-offset: 2px
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      height: clamp(16px, calc(var(--cform-checkbox-width) - clamp(2px, var(--cform-border-width), 100px)), 40px);
+      width: clamp(16px, calc(var(--cform-checkbox-width) - clamp(2px, var(--cform-border-width), 100px)), 40px);
+      cursor: pointer;
+      border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 6px);
+    }
+    &:before {
+      transition: border-left-width 0.3s ease-in-out, border-bottom-width 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+      content: "";
+      position: absolute;
+      height: clamp(16px, calc(var(--cform-checkbox-width) - clamp(2px, var(--cform-border-width), 100px)), 40px);
+      width: clamp(16px, calc(var(--cform-checkbox-width) - clamp(2px, var(--cform-border-width), 100px)), 40px);
+      cursor: pointer;
+      border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 6px);
+      border: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-accent);
+    }
+    &:checked {
+      &:before {
+        transform: rotate(-50deg) scale(0.99);
+        height: clamp(9px, calc(var(--cform-checkbox-width) / 2), 20px);
+        width: clamp(15px, calc(var(--cform-checkbox-width) / 1.2), 35px);
+        border-color: var(--cform-accent);
+        border-top-style: none;
+        border-right-style: none;
+        transform-origin: 70% 50%;
+        //border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 4px);
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+//file
+.cform:is([type=file]) {
+  background: unset !important;
+  border: unset;
+  font-size: clamp(10px, calc(var(--cform-font-size) - 2px), 20px);
+  cursor: pointer;
+  //transition: filter 0.2s linear;
+  line-height: 1;
+  padding: 0 !important; ;
+  box-shadow: unset !important;
+  margin: 0 !important;
+  appearance: none;
+  &::file-selector-button,
+  &::-webkit-file-upload-button {
+    margin-right: 15px;
+    background-color: var(--cform-accent);
+    border: unset;
+    border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 30px);
+    padding: var(--cform-padding) calc(var(--cform-padding) * 3);
+    padding-block: clamp(5px,calc(var(--cform-padding) * 2.5), 15px) ;
+    padding-inline: clamp(10px, calc(var(--cform-padding) * 3 ), 20px);
+    font-size: clamp(10px, calc(var(--cform-font-size) - 1px), 20px);
+    line-height: 1;
+    cursor: pointer;
+    color: var(--cform-accent-color);
+  }
+  &:focus-within {
+    outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+    outline-offset: 2px
+  }
+  &:has(:focus-within) {
+
+      outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+      outline-offset: 2px
+
+
+  }
+}
+
+
+
+//type color
+input[type="color"].cform {
+  background-color: var(--cform-bg);
+  border: clamp(0px, var(--cform-border-width), 2px) solid color-mix(in srgb, var(--cform-bg) 97%, #000000);
+  border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 30px);
+  border: unset;
+  margin: 0 !important;
+  padding: 2px !important;
+  box-sizing: unset;
+  appearance: none;
+  inline-size: clamp(20px, calc(var(--cform-checkbox-width)), 55px);
+  block-size: clamp(20px, calc(var(--cform-checkbox-width)), 55px);
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  &::-webkit-color-swatch {
+    border-color: color-mix(in srgb, var(--cform-bg) 92%, #000000);;
+    border-radius: clamp(0px, calc(var(--cform-radius) - 4px), 30px);
+    cursor: pointer;
+  }
+  &:focus-visible {
+    outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+    outline-offset: 2px
+  }
+}
+
+//fieldset
+fieldset.cform {
+  border: clamp(1px, var(--cform-border-width), 1px) solid color-mix(in srgb, var(--cform-bg) 97%, #000000);
+  //padding: 20px;
+  box-sizing: border-box;
+  border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 20px);
+  padding: var(--cform-padding) calc(var(--cform-padding) * 3);
+  padding-block: clamp(20px,calc(var(--cform-padding) * 4), 35px) ;
+  padding-inline: clamp(10px, calc(var(--cform-padding) * 3 ), 30px);
+  overflow: hidden;
+  * {
+    max-width: 100%;
+  }
+  legend {
+    color: var(--cform-legend);
+    //color: color-mix(in srgb, var(--cform-text-color) 35%, transparent);
+    font-weight: 300;
+    padding-inline: 20px;
+    font-size: clamp(11px, calc(var(--cform-font-size) - 2px), 20px);
+    user-select: none;
+  }
+}
+
+
+//Buttons
+.cform-btn {
+  display: inline-block;
+  margin: 0;
+  color: var(--cform-btn-default-text);
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: none;
+  white-space: nowrap;
+  line-height: 1.42857;
+  user-select: none;
+  padding: clamp(5px,calc(var(--cform-padding) * 2), 10px) clamp(10px, calc(var(--cform-padding) * 6 ), 50px);
+  font-size: clamp(12px, calc(var(--cform-font-size) - 1px), 20px);
+  transition: background 0.1s linear,box-shadow 0.15s linear,color 0.1s linear;
+  flex-shrink: 0;
+  text-decoration: none;
+  border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 30px);
+  background-color: var(--cform-btn-default) ;
+  box-sizing: border-box;
+  min-width: 90px;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    background-color: color-mix(in srgb, var(--cform-btn-default) 80%, #fff);
+  }
+  &:active {
+    background-color: color-mix(in srgb, var(--cform-btn-default) 97%, #000);
+  }
+  &:focus-visible {
+    outline: clamp(2px, var(--cform-border-width), 5px) solid var(--cform-border-focus-color);
+    outline-offset: 2px
+  }
+  &[disabled]{
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &.cform-btn-xl {
+    padding-block: clamp(10px,calc(var(--cform-padding) * 2.7), 20px) ;
+    padding-inline: clamp(15px, calc(var(--cform-padding) * 6 ), 50px);
+    font-size: clamp(12px, calc(var(--cform-font-size) + 1px), 20px);
+    min-width: 120px;
+  }
+  &.cform-btn-l {
+    padding-block: clamp(10px,calc(var(--cform-padding) * 2.5), 13px) ;
+    padding-inline: clamp(15px, calc(var(--cform-padding) * 5.5 ), 40px);
+    min-width: 70px;
+  }
+  &.cform-btn-sm {
+    padding-block: clamp(5px,calc(var(--cform-padding) - 10px), 7px) ;
+    padding-inline: clamp(10px, calc(var(--cform-padding) * 3 ), 20px);
+    font-size: clamp(10px, calc(var(--cform-font-size) - 3px), 20px);
+    border-radius: clamp(0px, calc(var(--cform-radius) - 4px), 30px);
+    min-width: 50px;
+  }
+
+  &.cform-btn-primary{
+    background-color: var(--cform-btn-primary);
+    //color: var(--cform-accent-color);
+    color: var(--cform-primary-color);
+    &:hover {
+      background-color: color-mix(in srgb, var(--cform-btn-primary) 80%, #fff);
+    }
+    &:active {
+      background-color: color-mix(in srgb, var(--cform-btn-primary) 80%, #000);
+    }
+  }
+  &.cform-btn-secondary{
+    background-color: var(--cform-btn-secondary);
+    //color: var(--cform-accent-color);
+    color: var(--cform-secondary-color);
+    &:hover {
+      background-color: color-mix(in srgb, var(--cform-btn-secondary) 80%, #fff);
+    }
+    &:active {
+      background-color: color-mix(in srgb, var(--cform-btn-secondary) 80%, #000);
+    }
+  }
+  &.cform-btn-info{
+    background-color: var(--cform-btn-info);
+    //color: var(--cform-accent-color);
+    color: var(--cform-info-color);
+    &:hover {
+      background-color: color-mix(in srgb, var(--cform-btn-info) 80%, #fff);
+    }
+    &:active {
+      background-color: color-mix(in srgb, var(--cform-btn-info) 80%, #000);
+    }
+  }
+  &.cform-btn-error{
+    background-color: var(--cform-error);
+    //color: var(--cform-accent-color);
+    color: var(--cform-error-color);
+    &:hover {
+      background-color: color-mix(in srgb, var(--cform-error) 90%, #fff);
+    }
+    &:active {
+      background-color: color-mix(in srgb, var(--cform-error) 80%, #000);
+    }
+  }
+  &.cform-btn-accent{
+    background-color: var(--cform-accent);
+    //color: var(--cform-accent-color);
+    color: var(--cform-accent-color-btn);
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--cform-accent) 90%, #fff);
+    }
+    &:active {
+      background-color: color-mix(in srgb, var(--cform-accent) 80%, #000);
+    }
+  }
+  &.cform-btn-outlined {
+    margin: 0;
+    background-color: transparent;
+    color: var(--cform-border-color);
+    border: clamp(2px, var(--cform-border-width), 4px) solid var(--cform-border-color);
+    padding-block: clamp(calc(5px - clamp(2px, var(--cform-border-width), 4px) ), calc(var(--cform-padding) * 2 - clamp(2px, var(--cform-border-width), 4px) ), calc(10px - clamp(2px, var(--cform-border-width), 4px) )) ;
+    padding-inline: clamp(calc(10px - clamp(2px, var(--cform-border-width), 4px) ), calc(var(--cform-padding) * 6 - clamp(2px, var(--cform-border-width), 4px) ) , calc(50px - clamp(2px, var(--cform-border-width), 4px) )) ;
+    &.cform-btn-xl {
+      padding-block: clamp(calc(10px - clamp(2px, var(--cform-border-width), 4px) ), calc(var(--cform-padding) * 2.7 - clamp(2px, var(--cform-border-width), 4px) ), calc(20px - clamp(2px, var(--cform-border-width), 4px) )) ;
+      padding-inline: clamp(calc(15px - clamp(2px, var(--cform-border-width), 4px) ), calc(var(--cform-padding) * 6 - clamp(2px, var(--cform-border-width), 4px) ) , calc(50px - clamp(2px, var(--cform-border-width), 4px) )) ;
+    }
+    &.cform-btn-l {
+      padding-block: clamp(calc(10px - clamp(2px, var(--cform-border-width), 4px) ), calc(var(--cform-padding) * 2.5 - clamp(2px, var(--cform-border-width), 4px) ), calc(13px - clamp(2px, var(--cform-border-width), 4px) )) ;
+      padding-inline: clamp(calc(15px - clamp(2px, var(--cform-border-width), 4px) ), calc(var(--cform-padding) * 5.5 - clamp(2px, var(--cform-border-width), 4px) ) , calc(40px - clamp(2px, var(--cform-border-width), 4px) )) ;
+    }
+    &.cform-btn-sm {
+      padding-block: clamp(calc(5px - clamp(2px, var(--cform-border-width), 4px) ), calc(var(--cform-padding) - 10px - clamp(2px, var(--cform-border-width), 4px) ), calc(7px - clamp(2px, var(--cform-border-width), 4px) )) ;
+      padding-inline: clamp(calc(10px - clamp(2px, var(--cform-border-width), 4px) ), calc(var(--cform-padding) * 3 - clamp(2px, var(--cform-border-width), 4px) ) , calc(20px - clamp(2px, var(--cform-border-width), 4px) )) ;
+    }
+    &.cform-btn-primary {
+      background-color: unset;
+      border-color: var(--cform-btn-primary);
+      color: var(--cform-btn-primary);
+      &:hover {
+        background-color: var(--cform-btn-primary);
+        color: var(--cform-accent-color);
+      }
+      &:active {
+        background-color: color-mix(in srgb, var(--cform-btn-primary) 80%, #fff);
+        border-color: color-mix(in srgb, var(--cform-btn-primary) 80%, #fff);
+        color: var(--cform-accent-color);
+      }
+    }
+    &.cform-btn-secondary {
+      background-color: unset;
+      border-color: var(--cform-btn-secondary);
+      color: var(--cform-btn-secondary);
+      &:hover {
+        background-color: var(--cform-btn-secondary);
+        color: var(--cform-accent-color);
+      }
+      &:active {
+        background-color: color-mix(in srgb, var(--cform-btn-secondary) 80%, #fff);
+        border-color: color-mix(in srgb, var(--cform-btn-secondary) 80%, #fff);
+        color: var(--cform-accent-color);
+      }
+    }
+    &.cform-btn-info {
+      background-color: unset;
+      border-color: var(--cform-btn-info);
+      color: var(--cform-btn-info);
+      &:hover {
+        background-color: var(--cform-btn-info);
+        color: var(--cform-accent-color);
+      }
+      &:active {
+        background-color: color-mix(in srgb, var(--cform-btn-info) 80%, #fff);
+        border-color: color-mix(in srgb, var(--cform-btn-info) 80%, #fff);
+        color: var(--cform-accent-color);
+      }
+    }
+    &.cform-btn-error{
+      background-color: unset;
+      border-color: var(--cform-error);
+      color: var(--cform-error);
+      &:hover {
+        background-color: var(--cform-error);
+        color: var(--cform-accent-color);
+      }
+      &:active {
+        background-color: color-mix(in srgb, var(--cform-error) 80%, #fff);
+        border-color: color-mix(in srgb, var(--cform-error) 80%, #fff);
+        color: var(--cform-accent-color);
+      }
+    }
+    &.cform-btn-accent {
+      background-color: unset;
+      border-color: var(--cform-accent);
+      color: var(--cform-accent);
+      &:hover {
+        background-color: var(--cform-accent);
+        color: var(--cform-accent-color);
+      }
+      &:active {
+        background-color: color-mix(in srgb, var(--cform-accent) 80%, #fff);
+        border-color: color-mix(in srgb, var(--cform-accent) 80%, #fff);
+        color: var(--cform-accent-color);
+      }
+    }
+  }
+  &.cform-btn-link{
+    background-color: transparent !important;
+    border: unset !important;
+    color: var(--cform-accent)
+  }
+  &.cform-btn-rounded {
+    border-radius: 50em;
+  }
+  &.cform-btn-block {
+    display: block;
+    width: 100%;
+  }
+}
+

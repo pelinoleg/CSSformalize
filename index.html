@@ -1,403 +1,286 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>Custom Forms</title>
-		<link rel="stylesheet" href="./css/index.css" />
-	</head>
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CSSformalize - The Fast-Track to Stylish Forms!</title>
+    <meta
+      name="description"
+      content="CSSformalize is a groundbreaking CSS framework designed to simplify and speed up the customization of your system HTML forms. Create unique form styles in a few clicks and enhance your design efficiency."
+    />
+    <meta
+      name="keywords"
+      content="CSS, HTML, Forms, Design, Customization, Framework, CSSformalize, Styling, Web Development, Frontend"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Pelin Oleg" />
+    <meta property="og:title" content="CSSformalize - The Fast-Track to Stylish Forms!" />
+    <meta
+      property="og:description"
+      content="CSSformalize is a groundbreaking CSS framework designed to simplify and speed up the customization of your system HTML forms. Create unique form styles in a few clicks and enhance your design efficiency."
+    />
+    <meta property="og:image" content="URL_TO_YOUR_IMAGE" />
+    <meta property="og:url" content="http://cssformalize.com" />
 
-	<body class="custom-scroll demo">
-		<div class="forms-wrap">
-			<div class="forms-item">
-				<div class="dark-mode">
-					<div class="checkbox checkbox-big">
-						<div>
-							<label for="dark-mode-ch">
-								<input class="custom-form" type="checkbox" name="dark-mode" id="dark-mode-ch" />
-								<span>Dark Mode</span>
-							</label>
-						</div>
-					</div>
-					<div class="source">
-						Source code:
-						<a href="https://github.com/pelinoleg/Custom-Css-Forms" target="_blank">GitHub</a>
-					</div>
-				</div>
-			</div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-			<div class="forms-item">
-				<span class="forms-item-title">Radio Group</span>
-				<div class="radio-group">
-					<input type="radio" id="option-one" name="selector" checked />
-					<label for="option-one">Html</label>
-					<input type="radio" id="option-two" name="selector" />
-					<label for="option-two">Css</label>
-					<input type="radio" id="option-three" name="selector" />
-					<label for="option-three">Javascript</label>
-				</div>
-				<br />
-				<br />
-				<span class="forms-item-title">Radio Group Rounded</span>
-				<div class="radio-group radio-group-rouned">
-					<input type="radio" id="option-one1" name="selector1" checked />
-					<label for="option-one1">Html</label>
-					<input type="radio" id="option-two1" name="selector1" />
-					<label for="option-two1">Css</label>
-					<input type="radio" id="option-three1" name="selector1" />
-					<label for="option-three1">Javascript</label>
-				</div>
-			</div>
+    <link rel="stylesheet" href="./css/css-formalize.css" />
+    <link rel="stylesheet" href="./css/demo.css" />
+    <link rel="stylesheet" href="./css/prism.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-			<div class="forms-item">
-				<span class="forms-item-title">Radio Group Small</span>
-				<div class="radio-group radio-group-small">
-					<input type="radio" id="option-one3" name="selector3" checked />
-					<label for="option-one3">Html</label>
-					<input type="radio" id="option-two3" name="selector3" />
-					<label for="option-two3">Css</label>
-					<input type="radio" id="option-three3" name="selector3" />
-					<label for="option-three3">Javascript</label>
-				</div>
-				<br />
-				<br />
-				<span class="forms-item-title">Radio Group Small Rounded</span>
-				<div class="radio-group radio-group-rouned radio-group-small">
-					<input type="radio" id="option-one2" name="selector2" checked />
-					<label for="option-one2">Html</label>
-					<input type="radio" id="option-two2" name="selector2" />
-					<label for="option-two2">Css</label>
-					<input type="radio" id="option-three2" name="selector2" />
-					<label for="option-three2">Javascript</label>
-				</div>
-			</div>
+    <!-- 'classic' theme -->
+  </head>
+  <style>
+    .page-right {
+      width: 100%;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+    header {
+      max-width: 1200px;
+    }
 
-			<div class="forms-item">
-				<span class="forms-item-title">Radio Group 2</span>
-				<div class="radio">
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio1" checked />
-							<span>HTML</span>
-						</label>
-					</div>
 
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio1" />
-							<span>CSS</span>
-						</label>
-					</div>
+  </style>
 
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio1" />
-							<span>Javascript</span>
-						</label>
-					</div>
-				</div>
-			</div>
+  <body class="demo">
+    <div class="circles">
+      <div class="circle circle-1">
+        <svg
+          viewBox="0 0 200 200"
+          preserveAspectRatio="xMidYMid meet"
+          xmlns="http://www.w3.org/2000/svg"
+          style="overflow: visible"
+        >
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(80)">
+              <stop offset="20%" stop-color="rgba(162, 26, 215, 0.25)" />
+              <stop offset="100%" stop-color="rgba(254, 8, 134, 0.25)" />
+            </linearGradient>
+          </defs>
+          <g>
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="scale"
+              values="1;1.2;1"
+              begin="0s"
+              dur="80s"
+              repeatCount="indefinite"
+              additive="sum"
+            />
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              values="0 100 100;360 100 100"
+              begin="0s"
+              dur="200s"
+              repeatCount="indefinite"
+              additive="sum"
+            />
+            <path
+              fill="url(#gradient)"
+              stroke="#ebedf1"
+              stroke-width="5"
+              stroke-opacity="0.5"
+              d="M38.5,-64.7C51.7,-59,65.4,-52.4,75.1,-41.4C84.9,-30.5,90.6,-15.2,88.8,-1C87.1,13.2,77.8,26.4,69.5,39.7C61.1,53,53.6,66.4,42.2,74.3C30.7,82.2,15.4,84.6,-0.3,85.1C-15.9,85.5,-31.7,84,-45,77.2C-58.4,70.3,-69.1,58.2,-75.5,44.5C-81.8,30.7,-83.7,15.4,-82.1,0.9C-80.4,-13.5,-75.3,-27,-69.1,-41C-63,-55.1,-55.8,-69.6,-44.1,-76.2C-32.4,-82.7,-16.2,-81.2,-1.8,-78.1C12.6,-75,25.3,-70.4,38.5,-64.7Z"
+              transform="translate(100 100)"
+            >
+              <animate
+                repeatCount="indefinite"
+                fill="freeze"
+                attributeName="d"
+                dur="45s"
+                values="M38.5,-64.7C51.7,-59,65.4,-52.4,75.1,-41.4C84.9,-30.5,90.6,-15.2,88.8,-1C87.1,13.2,77.8,26.4,69.5,39.7C61.1,53,53.6,66.4,42.2,74.3C30.7,82.2,15.4,84.6,-0.3,85.1C-15.9,85.5,-31.7,84,-45,77.2C-58.4,70.3,-69.1,58.2,-75.5,44.5C-81.8,30.7,-83.7,15.4,-82.1,0.9C-80.4,-13.5,-75.3,-27,-69.1,-41C-63,-55.1,-55.8,-69.6,-44.1,-76.2C-32.4,-82.7,-16.2,-81.2,-1.8,-78.1C12.6,-75,25.3,-70.4,38.5,-64.7Z;
+              M19.7,-35.6C26.2,-30.4,32.6,-26.5,38.7,-20.7C44.8,-15,50.7,-7.5,52.8,1.2C54.9,9.9,53.3,19.9,49.9,30.3C46.5,40.7,41.3,51.6,32.6,53.5C24,55.4,12,48.4,-2,51.9C-16,55.3,-32.1,69.3,-39.4,66.7C-46.8,64,-45.5,44.8,-49.1,30.9C-52.6,17,-61.1,8.5,-67.6,-3.8C-74.2,-16.1,-78.9,-32.2,-71.7,-39.8C-64.6,-47.5,-45.6,-46.7,-31.6,-47.6C-17.7,-48.6,-8.8,-51.2,-1.1,-49.2C6.6,-47.3,13.2,-40.8,19.7,-35.6Z;
+              M38.5,-64.7C51.7,-59,65.4,-52.4,75.1,-41.4C84.9,-30.5,90.6,-15.2,88.8,-1C87.1,13.2,77.8,26.4,69.5,39.7C61.1,53,53.6,66.4,42.2,74.3C30.7,82.2,15.4,84.6,-0.3,85.1C-15.9,85.5,-31.7,84,-45,77.2C-58.4,70.3,-69.1,58.2,-75.5,44.5C-81.8,30.7,-83.7,15.4,-82.1,0.9C-80.4,-13.5,-75.3,-27,-69.1,-41C-63,-55.1,-55.8,-69.6,-44.1,-76.2C-32.4,-82.7,-16.2,-81.2,-1.8,-78.1C12.6,-75,25.3,-70.4,38.5,-64.7Z"
+              />
+              <animate attributeName="stroke-width" dur="20s" values="5;10;5" repeatCount="indefinite" />
+              <animate attributeName="stroke-opacity" dur="20s" values="0.9;0.5;0.95" repeatCount="indefinite" />
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="circle circle-2">
+        <svg
+          viewBox="0 0 200 200"
+          preserveAspectRatio="xMidYMid meet"
+          xmlns="http://www.w3.org/2000/svg"
+          style="overflow: visible"
+        >
+          <defs>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(100)">
+              <stop offset="0%" stop-color="rgba(162, 26, 215, 0.25)" />
+              <stop offset="100%" stop-color="rgba(254, 8, 134, 0.25)" />
+            </linearGradient>
+          </defs>
+          <g>
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="scale"
+              values="1;1.5;1"
+              begin="0s"
+              dur="50s"
+              repeatCount="indefinite"
+              additive="sum"
+            />
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              values="0 100 100;360 100 100"
+              begin="0s"
+              dur="120s"
+              repeatCount="indefinite"
+              additive="sum"
+            />
+            <path
+              fill="url(#gradient2)"
+              stroke="#ebedf1"
+              stroke-width="10"
+              stroke-opacity="0.1"
+              d="M30.5,-49.2C42.5,-45.9,57.1,-43.7,66.7,-35.7C76.3,-27.6,80.7,-13.8,81.5,0.4C82.2,14.7,79.3,29.4,70.6,39C62,48.6,47.6,53.1,34.9,57C22.2,60.9,11.1,64.2,-2.5,68.6C-16.1,72.9,-32.2,78.4,-44.5,74.2C-56.8,70,-65.3,56.3,-73.4,42.3C-81.6,28.4,-89.4,14.2,-85.1,2.4C-80.9,-9.3,-64.6,-18.6,-53.9,-28.2C-43.3,-37.8,-38.3,-47.8,-30.3,-53.3C-22.2,-58.9,-11.1,-60.2,-0.9,-58.6C9.3,-57,18.5,-52.5,30.5,-49.2Z"
+              transform="translate(100 100)"
+            >
+              <animate
+                repeatCount="indefinite"
+                fill="freeze"
+                attributeName="d"
+                dur="20s"
+                values="M30.5,-49.2C42.5,-45.9,57.1,-43.7,66.7,-35.7C76.3,-27.6,80.7,-13.8,81.5,0.4C82.2,14.7,79.3,29.4,70.6,39C62,48.6,47.6,53.1,34.9,57C22.2,60.9,11.1,64.2,-2.5,68.6C-16.1,72.9,-32.2,78.4,-44.5,74.2C-56.8,70,-65.3,56.3,-73.4,42.3C-81.6,28.4,-89.4,14.2,-85.1,2.4C-80.9,-9.3,-64.6,-18.6,-53.9,-28.2C-43.3,-37.8,-38.3,-47.8,-30.3,-53.3C-22.2,-58.9,-11.1,-60.2,-0.9,-58.6C9.3,-57,18.5,-52.5,30.5,-49.2Z;
+              M26.6,-48.5C34.2,-41.7,39.9,-34,50,-25.8C60.1,-17.6,74.6,-8.8,79.2,2.6C83.7,14.1,78.5,28.2,71.6,42C64.8,55.9,56.4,69.5,44.2,67.1C32,64.7,16,46.3,2.6,41.9C-10.9,37.4,-21.7,46.9,-29.3,46.7C-36.9,46.4,-41.1,36.3,-43.9,26.9C-46.7,17.4,-48,8.7,-52.5,-2.6C-57,-13.9,-64.8,-27.9,-63.4,-39.7C-62,-51.5,-51.5,-61.2,-39.4,-65.4C-27.3,-69.5,-13.7,-68.2,-2.1,-64.6C9.5,-61,19,-55.2,26.6,-48.5Z;
+              M30.5,-49.2C42.5,-45.9,57.1,-43.7,66.7,-35.7C76.3,-27.6,80.7,-13.8,81.5,0.4C82.2,14.7,79.3,29.4,70.6,39C62,48.6,47.6,53.1,34.9,57C22.2,60.9,11.1,64.2,-2.5,68.6C-16.1,72.9,-32.2,78.4,-44.5,74.2C-56.8,70,-65.3,56.3,-73.4,42.3C-81.6,28.4,-89.4,14.2,-85.1,2.4C-80.9,-9.3,-64.6,-18.6,-53.9,-28.2C-43.3,-37.8,-38.3,-47.8,-30.3,-53.3C-22.2,-58.9,-11.1,-60.2,-0.9,-58.6C9.3,-57,18.5,-52.5,30.5,-49.2Z"
+              />
+              <animate attributeName="stroke-width" dur="20s" values="1;10;1" repeatCount="indefinite" />
+              <animate attributeName="stroke-opacity" dur="20s" values="0.9;0.75;0.95" repeatCount="indefinite" />
+            </path>
+          </g>
+        </svg>
+      </div>
+      <div class="circle circle-3"></div>
+    </div>
 
-			<div class="forms-item">
-				<span class="forms-item-title">Radio Group 2 Big</span>
-				<div class="radio radio-big">
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio2" checked />
-							<span>HTML</span>
-						</label>
-					</div>
+    <div class="page home-page" >
 
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio2" />
-							<span>CSS</span>
-						</label>
-					</div>
+        <main class="main-page">
+          <header>
+            <div class="header-wrap">
+              <div class="site-title">
+                <h1 class="title"><span>CSS</span><strong>formalize</strong></h1>
+                <h2 class="">The Fast-Track to Stylish HTML Forms!</h2>
+                <div class="version">v 2.0</div>
+                <a href="generate.html" class="hbtn">
+                  Generate Your Form!
+                  <div class="hbtn-2"></div>
+                </a>
+              </div>
+              <div class="header-content flex">
+                <div class="header-left">
+                  <p class="description">
+                    Introducing <strong>CSSformalize</strong> - a groundbreaking CSS framework engineered exclusively for effortless customization of native HTML forms. With just a few clicks on our intuitive on-site interface, you can define paddings, dimensions, and color schemes tailored to your preference. Simply link our lightweight CSS file to your project, integrate the automatically generated CSS variables, and watch your form designs come to life!
+                  </p>
+                  <p class="keys">Key Features:
+                    <ul>
+                  <li>
+                    <strong>Purely Native:</strong> Leverage the power of native forms - no JavaScript involved, only CSS.
+                  </li>
+                  <li>
+                    <strong>Complete Customizability:</strong> Every aspect is customizable using CSS variables for unrivaled design flexibility.
+                  </li>
+                  <li>
+                    <strong>State-of-the-Art CSS Properties:</strong> CSSformalize harnesses the latest CSS properties, incorporating cutting-edge features that are ready to use.
+                  </li>
+                  <li>
+                    <strong>Design Freedom:</strong> Generate a design aesthetic that aligns perfectly with your vision.
+                  </li>
+                  <li>
+                    <strong>Lightweight and User-friendly:</strong> Optimized for minimum file size and easy integration for a seamless user experience.
+                  </li>
+                </ul>
 
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio2" />
-							<span>Javascript</span>
-						</label>
-					</div>
-				</div>
-			</div>
+                  </p>
+                </div>
+              </div>
+<!--              <div class="header-form"></div>-->
+            </div>
 
-			<div class="forms-item">
-				<span class="forms-item-title">Radio Group 2 Inline</span>
-				<div class="radio radio-inline">
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio3" checked />
-							<span>Html</span>
-						</label>
-					</div>
+            <nav>
+              <div class="links">
+                <div class="link-item">
+                  <span>Source Code:</span>
+                  <a href="#" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+                <div class="link-item">
+                  <span>CDN:</span>
+                  <a href="#" target="_blank">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                  </a>
+                </div>
+              </div>
 
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio3" />
-							<span>Css</span>
-						</label>
-					</div>
+              <div class="support">Chrome: 114 ></div>
+            </nav>
+          </header>
 
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio3" />
-							<span>Javascript</span>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio3" />
-							<span>Gulp</span>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio3" />
-							<span>Sass</span>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio3" />
-							<span>Postcss</span>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input class="custom-form" type="radio" name="radio3" />
-							<span>Git</span>
-						</label>
-					</div>
-				</div>
-			</div>
 
-			<div class="forms-item">
-				<span class="forms-item-title">Checkboxes Group 2</span>
-				<div class="checkbox">
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox1" checked />
-							<span>HTML</span>
-						</label>
-					</div>
+          <div class="main-content"></div>
 
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox1" />
-							<span>CSS</span>
-						</label>
-					</div>
+<!--          <footer style="height: 100px">contact</footer>-->
+        </main>
+      <main class="main-page">
+        <div class="install-wrap">
 
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox1" />
-							<span>Javascript</span>
-						</label>
-					</div>
-				</div>
-			</div>
 
-			<div class="forms-item">
-				<span class="forms-item-title">Checkboxes Big</span>
-				<div class="checkbox checkbox-big">
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox2" checked />
-							<span>HTML</span>
-						</label>
-					</div>
+          <div class="install-title" id="install-title">Quick Start Guide</div>
+          <div class="install-description">
+            <span>Getting CSSformalize working with your project is straightforward. Just follow these easy steps:</span>
+            <ol>
+              <li><strong>Form Customization:</strong> Use our left sidebar to adjust global variables that define the overall appearance of your forms. In the central view, observe how your adjustments affect your forms and fine-tune the design further by customizing local variables unique to each form.</li>
+              <li>
+                <strong>Style Integration:</strong> Incorporate the 'formalize.css' stylesheet into your project. You can download
+                it from our GitHub [URL] or fetch it directly from the CDN [URL].
+                <br />
+                You can also install CSSformalize through npm using the following command: [command]
+              </li>
+              <li>
+                <strong>Variable Implementation: </strong> After linking the 'formalize.css' file, copy and paste the CSS variables generated during the customization process.
+              </li>
+              <li><strong>Copy HTML Code:</strong> Under each form group, you'll find a tab that reveals the necessary HTML code upon clicking. Copy this code into your project for the styles to take effect.</li>
+            </ol>
+          </div>
+        </div>
 
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox2" />
-							<span>CSS</span>
-						</label>
-					</div>
 
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox2" />
-							<span>Javascript</span>
-						</label>
-					</div>
-				</div>
-			</div>
+      </main>
 
-			<div class="forms-item">
-				<span class="forms-item-title">Checkboxes Inline</span>
-				<div class="checkbox checkbox-inline">
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox3" checked />
-							<span>HTML</span>
-						</label>
-					</div>
+    </div>
 
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox3" />
-							<span>CSS</span>
-						</label>
-					</div>
+    <script src="js/prism.js"></script>
 
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox3" />
-							<span>Javascript</span>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox3" />
-							<span>Gulp</span>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox3" />
-							<span>Sass</span>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox3" />
-							<span>Postcss</span>
-						</label>
-					</div>
-					<div>
-						<label>
-							<input class="custom-form" type="checkbox" name="checkbox3" />
-							<span>Git</span>
-						</label>
-					</div>
-				</div>
-			</div>
+    <!--    tootlips-->
 
-			<div class="forms-item">
-				<span class="forms-item-title">Default Checkboxes</span>
-				<input class="custom-form" type="checkbox" disabled />
-				<input class="custom-form" type="checkbox" />
-				<input class="custom-form" type="checkbox" checked />
-				<input class="custom-form" type="checkbox" checked disabled />
-				<br />
-				<br />
-				<br />
-				<span class="forms-item-title">Default Radio Buttons</span>
-				<input class="custom-form" type="radio" disabled />
-				<input class="custom-form" type="radio" name="radio" />
-				<input class="custom-form" type="radio" name="radio" checked />
-				<input class="custom-form" type="radio" name="radio23" checked disabled />
-			</div>
-
-			<div class="forms-item">
-				<span class="forms-item-title">Switch (custom checkboxes)</span>
-				<div class="switch switch-big">
-					<input type="checkbox" id="switch-1" />
-					<label for="switch-1"></label>
-				</div>
-				<div class="switch">
-					<input type="checkbox" id="switch-2" />
-					<label for="switch-2"></label>
-				</div>
-				<div class="switch switch-small">
-					<input type="checkbox" id="switch-3" />
-					<label for="switch-3"></label>
-				</div>
-			</div>
-
-			<div class="forms-item">
-				<input class="custom-form" type="email" placeholder="disabled" disabled="true" value="disabled" />
-				<input class="custom-form invalid" type="text" placeholder="input invalid" />
-				<input class="custom-form" type="password" placeholder="password" name="password" />
-
-				<input list="tech" class="select custom-form" placeholder="input list" />
-
-				<datalist id="tech">
-					<option value="HTML"> </option>
-					<option value="CSS"> </option>
-					<option value="Javascript"> </option>
-					<option value="Gulp"> </option>
-					<option value="SASS"> </option>
-					<option value="PostCSS"> </option>
-					<option value="Git"> </option>
-				</datalist>
-			</div>
-
-			<div class="forms-item">
-				<input class="custom-form" type="number" placeholder="number" />
-				<input class="custom-form" type="date" />
-				<input class="custom-form" type="datetime-local" class="focus-ring" />
-				<input class="custom-form" type="month" />
-			</div>
-
-			<div class="forms-item">
-				<input class="custom-form" type="search" placeholder="search" />
-				<input class="custom-form" type="tel" placeholder="phone" />
-				<input class="custom-form" type="time" />
-				<input class="custom-form" type="week" />
-			</div>
-
-			<div class="forms-item">
-				<textarea class="custom-form" name="" id="" rows="5" placeholder="text">
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et mollitia, odio veritatis culpa sint tempora optio placeat nobis inventore accusantium asperiores quam vero laboriosam quo non! Deleniti, cupiditate tempora. Impedit!
-			</textarea
-				>
-			</div>
-
-			<div class="forms-item">
-				<select class="custom-form" name="" id="">
-					<option value="select">System Select</option>
-					<option value="select">select 1</option>
-					<option value="select">select 2</option>
-					<option value="select">select 3</option>
-					<option value="select">select 4</option>
-					<option value="select">select 5</option>
-					<option value="select">select 6</option>
-					<option value="select">select 7</option>
-				</select>
-				<div class="select custom-form">Custom Select</div>
-			</div>
-
-			<div class="forms-item">
-				<select class="custom-form" name="" id="" multiple>
-					<option value="select">select 1</option>
-					<option value="select">select 2</option>
-					<option value="select">select 3</option>
-					<option value="select">select 4</option>
-					<option value="select">select 5</option>
-					<option value="select">select 6</option>
-					<option value="select">select 7</option>
-				</select>
-			</div>
-
-			<div class="forms-item">
-				<input class="custom-form" type="file" />
-				<input type="color" class="custom-form" />
-			</div>
-		</div>
-
-		<script>
-			const chk = document.getElementById("dark-mode-ch");
-
-			chk.addEventListener("click", () => {
-				chk.checked
-					? document.documentElement.setAttribute("data-theme", "dark")
-					: document.documentElement.setAttribute("data-theme", "light");
-				localStorage.setItem("darkModeStatus", chk.checked);
-			});
-
-			window.addEventListener("load", (event) => {
-				if (localStorage.getItem("darkModeStatus") == "true") {
-					document.documentElement.setAttribute("data-theme", "dark");
-					document.getElementById("dark-mode-ch").checked = true;
-				} else {
-					document.documentElement.setAttribute("data-theme", "light");
-				}
-			});
-		</script>
-	</body>
+<!--    <script src="js/variables.js"></script>-->
+<!--    <script src="js/script.js"></script>-->
+  </body>
 </html>
