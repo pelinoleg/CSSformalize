@@ -1028,7 +1028,8 @@ code[class*=language-], pre[class*=language-] {
   overflow: auto;
   min-height: 100vh;
   gap: 40px;
-  padding: 100px 0;
+  padding: 50px 0;
+  scroll-behavior: smooth;
 }
 .home-page main {
   min-height: 100vh;
@@ -1038,7 +1039,7 @@ code[class*=language-], pre[class*=language-] {
 
 .install-wrap {
   position: relative;
-  padding: 40px 60px;
+  padding: 40px 60px 100px;
   overflow: hidden;
   display: flex;
   width: 50vw;
@@ -1091,4 +1092,14 @@ code[class*=language-], pre[class*=language-] {
   background: var(--demo-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.install-link {
+  margin: 50px 0 40px;
+}
+.install-link a {
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--demo-text-color);
+  color: var(--demo-text-color);
 }
