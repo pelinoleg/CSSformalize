@@ -316,36 +316,36 @@ header {
 
 
 
-  .site-title {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.site-title {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  h2 {
-    color: var(--demo-text-color);
-    font-size: 24px;
-    text-wrap: balance;
-    //text-align: center;
-    font-weight: 300;
-  }
-  .version {
-    color: var(--demo-text-color);
-    font-weight: bold;
-  }
+h2 {
+  color: var(--demo-text-color);
+  font-size: 24px;
+  text-wrap: balance;
+  //text-align: center;
+  font-weight: 300;
+}
+.version {
+  color: var(--demo-text-color);
+  font-weight: bold;
+}
 
-  .description {
-    //color: #584444;
-    margin: 30px 0px auto;
-    font-size: 18px;
-    line-height: 1.3;
-    font-weight: 400;
-    text-align: center;
-    text-wrap: balance;
-  }
+.description {
+  //color: #584444;
+  margin: 30px 0px auto;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 400;
+  text-align: center;
+  text-wrap: balance;
+}
 
 
 .theme-buttons {
@@ -493,7 +493,7 @@ nav {
   padding: 0 20px;
   color: var(--demo-text-color);
   border-radius: calc(var(--demo-border-radius) - 5px);
-  background: rgba(71, 85, 105,.07);
+  background: rgba(71, 85, 105, .07);
   //border-top: 1px solid rgba(#fff, 0.2);
   //border-bottom: 1px solid rgba(#fff, 0.2);
 
@@ -501,7 +501,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 50px;
-
     .link-item {
       display: flex;
       gap: 15px;
@@ -511,22 +510,37 @@ nav {
         background: var(--demo-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-size: 28px;
       }
     }
   }
 
-  .version {
-    font-size: 14px;
-    //color: #4c3333;
-  }
+  .support {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    //color: rgba(#000, 0.8);
+    a {
+      background: var(--demo-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 28px;
+    }
 
-  a {
-    //color: #4c3333;
-    font-size: 28px;
-    transition: transform 0.2s ease;
-    text-decoration: none;
-    &:hover {
-      transform: translateY(-3px);
+    .version {
+      font-size: 14px;
+      //color: #4c3333;
+    }
+
+    a {
+      //color: #4c3333;
+      font-size: 28px;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
     }
   }
 }

@@ -457,16 +457,28 @@ nav .links .link-item a {
   background: var(--demo-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 28px;
 }
-nav .version {
+nav .support {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+nav .support a {
+  background: var(--demo-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+}
+nav .support .version {
   font-size: 14px;
 }
-nav a {
+nav .support a {
   font-size: 28px;
   transition: transform 0.2s ease;
   text-decoration: none;
 }
-nav a:hover {
+nav .support a:hover {
   transform: translateY(-3px);
 }
 
