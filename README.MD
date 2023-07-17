@@ -1,6 +1,6 @@
-[![GitHub forks](https://img.shields.io/github/forks/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/network)
-[![GitHub issues](https://img.shields.io/github/issues/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/issues)
-[![GitHub stars](https://img.shields.io/github/stars/pelinoleg/Fillz-Forms.svg)](https://github.com/pelinoleg/Fillz-Forms/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/network)
+[![GitHub issues](https://img.shields.io/github/issues/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/issues)
+[![GitHub stars](https://img.shields.io/github/stars/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/stargazers)
 
 
 # CSSformalize v2.0
@@ -9,7 +9,7 @@
 For a live demo, visit [cssformalize.com](http://cssformalize.com). Happy designing!
 
 
-![Dark and Light mode example for custom css forms](https://github.com/pelinoleg/Fillz-Forms/blob/master/custom_forms_demo.jpg)
+![Dark and Light mode example for custom css forms](https://github.com/pelinoleg/CSSformalize/blob/master/screen.jpg)
 
 
 
