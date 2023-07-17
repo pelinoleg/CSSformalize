@@ -1014,12 +1014,14 @@ code[class*=language-], pre[class*=language-] {
 .home-page {
   flex-direction: column;
   overflow: auto;
-  height: 100vh;
+  min-height: 100vh;
   gap: 40px;
+  padding: 100px 0;
 }
 .home-page main {
-  height: 100vh;
+  min-height: 100vh;
   flex-shrink: 0;
+  height: auto;
 }
 
 .install-wrap {
