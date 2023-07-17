@@ -1187,6 +1187,17 @@ code[class*=language-], pre[class*=language-] {
       text-wrap: balance;
       display: block;
     }
+    code {
+      font-size: 12px;
+      display: block;
+      line-height: 16px;
+      margin-top: 5px;
+      margin-bottom: 7px;
+      outline: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 3px;
+      word-wrap: break-word;
+    }
   }
   ol {
     margin: 35px auto 0 ;
