@@ -1059,9 +1059,9 @@ code[class*=language-], pre[class*=language-] {
   line-height: 16px;
   margin-top: 5px;
   margin-bottom: 7px;
-  outline: 1px solid #ccc;
+  background: rgba(71, 85, 105, 0.07);
   border-radius: 5px;
-  padding: 3px;
+  padding: 3px 5px;
   word-wrap: break-word;
 }
 .install-wrap ol {
