@@ -27,7 +27,7 @@ Getting CSSformalize working with your project is straightforward. Just follow t
 
 1. **Form Customization**: Visit [cssformalize.com](http://cssformalize.com). Use our left sidebar to adjust global variables that define the overall appearance of your forms. In the central view, observe how your adjustments affect your forms and fine-tune the design further by customizing local variables unique to each form.
 
-2. **Style Integration**: Incorporate the 'formalize.css' stylesheet into your project. You can download it from our GitHub [URL] or fetch it directly from the CDN [URL].
+2. **Style Integration**: Incorporate the 'formalize.css' stylesheet into your project. You can download it from our GitHub `https://raw.githubusercontent.com/pelinoleg/CSSformalize/master/css/css-formalize.css` or fetch it directly from the CDN `https://cdn.jsdelivr.net/gh/pelinoleg/CSSformalize@master/css/css-formalize.css`. minified: `https://cdn.jsdelivr.net/gh/pelinoleg/CSSformalize@master/css/css-formalize.min.css`.
    You can also install CSSformalize through npm using the following command: `[command]`
 
 3. **Variable Implementation**: After linking the 'formalize.css' file, copy and paste the CSS variables generated during the customization process.
