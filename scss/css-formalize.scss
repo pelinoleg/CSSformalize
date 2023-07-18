@@ -195,7 +195,6 @@
 }
 
 .cform:is(input[list]) {
-  //display: none;
   &::-webkit-calendar-picker-indicator {
     display: none !important;
   }
@@ -208,15 +207,12 @@
 
           linear-gradient(45deg, transparent 50%, color-mix(in srgb, var(--cform-text-placeholder-color) 70%, transparent) 50%),
           linear-gradient(135deg,  color-mix(in srgb, var(--cform-text-placeholder-color) 70%, transparent) 50%, transparent 50%);
-          //linear-gradient(to right, var(--cform-text-placeholder-color), var(--cform-text-placeholder-color));
   background-position:
           calc(100% - clamp(15px, calc(var(--cform-padding) + 13px ), 25px) ) 50%,
           calc(100% - clamp(10px, calc(var(--cform-padding) + 8px ), 20px) ) 50%;
-          //calc(100% - clamp(25px, calc(var(--cform-padding) + 30px ) , 45px));
   background-size:
           5px 5px,
           5px 5px;
-          //1px 55%;
   background-repeat: no-repeat;
   cursor: pointer;
   display: inline-block;
@@ -344,7 +340,7 @@
   padding: 4px;
   display: inline-flex;
   align-items: flex-start;
-  //outline: 1px solid red;
+
   input[type="checkbox"] {
     @extend .hide-input;
     & + label {
@@ -589,7 +585,6 @@ input[type="range"].cform {
         border-top-style: none;
         border-right-style: none;
         transform-origin: 70% 50%;
-        //border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 4px);
         border-radius: 0;
       }
     }
@@ -602,7 +597,6 @@ input[type="range"].cform {
   border: unset;
   font-size: clamp(10px, calc(var(--cform-font-size) - 2px), 20px);
   cursor: pointer;
-  //transition: filter 0.2s linear;
   line-height: 1;
   padding: 0 !important; ;
   box-shadow: unset !important;
@@ -666,7 +660,6 @@ input[type="color"].cform {
 //fieldset
 fieldset.cform {
   border: clamp(1px, var(--cform-border-width), 1px) solid color-mix(in srgb, var(--cform-bg) 97%, #000000);
-  //padding: 20px;
   box-sizing: border-box;
   border-radius: clamp(0px, calc(var(--cform-radius) - 2px), 20px);
   padding: var(--cform-padding) calc(var(--cform-padding) * 3);
@@ -678,7 +671,6 @@ fieldset.cform {
   }
   legend {
     color: var(--cform-legend);
-    //color: color-mix(in srgb, var(--cform-text-color) 35%, transparent);
     font-weight: 300;
     padding-inline: 20px;
     font-size: clamp(11px, calc(var(--cform-font-size) - 2px), 20px);
@@ -746,7 +738,6 @@ fieldset.cform {
 
   &.cform-btn-primary{
     background-color: var(--cform-btn-primary);
-    //color: var(--cform-accent-color);
     color: var(--cform-primary-color);
     &:hover {
       background-color: color-mix(in srgb, var(--cform-btn-primary) 80%, #fff);
@@ -757,7 +748,6 @@ fieldset.cform {
   }
   &.cform-btn-secondary{
     background-color: var(--cform-btn-secondary);
-    //color: var(--cform-accent-color);
     color: var(--cform-secondary-color);
     &:hover {
       background-color: color-mix(in srgb, var(--cform-btn-secondary) 80%, #fff);
@@ -768,7 +758,6 @@ fieldset.cform {
   }
   &.cform-btn-info{
     background-color: var(--cform-btn-info);
-    //color: var(--cform-accent-color);
     color: var(--cform-info-color);
     &:hover {
       background-color: color-mix(in srgb, var(--cform-btn-info) 80%, #fff);
@@ -779,7 +768,6 @@ fieldset.cform {
   }
   &.cform-btn-error{
     background-color: var(--cform-error);
-    //color: var(--cform-accent-color);
     color: var(--cform-error-color);
     &:hover {
       background-color: color-mix(in srgb, var(--cform-error) 90%, #fff);
@@ -790,7 +778,6 @@ fieldset.cform {
   }
   &.cform-btn-accent{
     background-color: var(--cform-accent);
-    //color: var(--cform-accent-color);
     color: var(--cform-accent-color-btn);
 
     &:hover {

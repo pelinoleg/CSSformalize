@@ -7,16 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const input = mutation.target;
         const newValue = input.style.getPropertyValue("--pcr-color");
 
-        // Ищем связанные кнопки
         const relatedInputs = document.querySelectorAll(`[data-class="${input.dataset.class}"][data-id="${input.dataset.id}"]`);
 
-        // Сравниваем новое значение с текущим значением каждой связанной кнопки
         relatedInputs.forEach((relatedInput) => {
           const currentValue = relatedInput.style.getPropertyValue("--pcr-color");
           if (newValue !== currentValue) {
             relatedInput.style.setProperty("--pcr-color", newValue);
 
-            // Здесь мы также устанавливаем или сбрасываем состояние кнопки сброса
             const resetButton = relatedInput.closest(".sidebar-option").querySelector(".reset-btn");
             const dataClass = relatedInput.dataset.class || ":root";
             const varName = cssVariables[relatedInput.dataset.id];
@@ -57,10 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
           relatedInput.pickr.setColor(defaultValue);
         }
         relatedInput.dataset.color = defaultValue;
-        relatedInput.style.setProperty("--pcr-color", defaultValue); // Добавим обновление цвета кнопки здесь
+        relatedInput.style.setProperty("--pcr-color", defaultValue);
 
         const relatedResetButton = relatedInput.closest(".sidebar-option").querySelector(".reset-btn");
-        relatedResetButton.classList.remove("btn-show"); // Сбрасываем состояние каждой связанной кнопки сброса
+        relatedResetButton.classList.remove("btn-show");
       });
 
       currentValues[varName] = defaultValue;
@@ -68,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     input.addEventListener("click", function () {
-      // Удаляем старый экземпляр Pickr, если он есть
+
       if (input.pickr) {
         const index = pickrInstances.findIndex((p) => p.instance === input.pickr);
         if (index !== -1) {
@@ -78,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
         input.pickr = null;
       }
 
-      // Здесь мы используем сохраненный цвет, если он есть, в противном случае используем начальное значение
       const dataClass = input.dataset.class || ":root";
       const varName = cssVariables[input.dataset.id];
       const computedValue =
@@ -86,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       input.style.setProperty("--pcr-color", computedValue);
 
-      // Создаем новый экземпляр Pickr с актуальным начальным значением
       const defaultColor = computedValue === 'transparent' ? 'rgba(203, 213, 225, 1)' : computedValue;
 
       const pickr = Pickr.create({
@@ -110,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
       pickrButton.dataset.id = input.dataset.id;
       pickrButton.dataset.class = input.dataset.class;
 
-      // Если цвет кнопки не прозрачный, то устанавливаем его
       if (computedValue !== 'transparent') {
         pickrButton.style.setProperty("--pcr-color", computedValue);
       }
@@ -122,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
         setVariableForClass(dataClass, varName, value);
         pickrButton.style.setProperty("--pcr-color", value);
 
-        // Добавляем этот код здесь:
         const relatedInputs = document.querySelectorAll(`[data-class="${input.dataset.class}"][data-id="${input.dataset.id}"]`);
 
         relatedInputs.forEach((relatedInput) => {
@@ -134,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
         updateOutput();
         pickr.applyColor();
 
-        // Обновляем все остальные экземпляры Pickr, которые связаны с этим же CSS-свойством и классом
         pickrInstances.forEach((pickrInstance) => {
           const otherButton = pickrInstance.instance.getRoot().button;
           if (
@@ -149,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
 
-        // обновляем значение свойства --pcr-color во всех связанных кнопках, даже если другой pickr не был инициирован
         const relatedButtons = document.querySelectorAll(`[data-class="${input.dataset.class}"][data-id="${input.dataset.id}"]`);
         relatedButtons.forEach((btn) => {
           btn.style.setProperty("--pcr-color", value);
@@ -235,7 +226,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const classDefaultValues = themes.default[className] || themes.default;
       const changedVariables = Array.from(styles).filter((variable) => {
         const currentValue = styles.getPropertyValue(variable).trim();
-        // Игнорируем переменные, значения которых совпадают со значениями по умолчанию
         return variable !== "--demo-bg" && currentValue !== classDefaultValues[variable];
       });
       if (changedVariables.length === 0) return;
@@ -256,7 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const elements = document.querySelectorAll(className);
       elements.forEach((el) => {
         if (el && el.style) {
-          // Check if element and style exist
           Array.from(el.style).forEach((variable) => {
             el.style.removeProperty(variable);
           });
@@ -322,11 +311,9 @@ document.addEventListener("DOMContentLoaded", function () {
                   pickrInstance.instance.setColor(value);
                 }
 
-                // Если задано - устанавливаем значение свойства --pcr-color
                 if (themes[themeName][inputElement.dataset.class] && themes[themeName][inputElement.dataset.class][cssVariables[inputElement.dataset.id]]) {
                   inputElement.style.setProperty("--pcr-color", value);
                 } else {
-                  // Если не задано - делаем кнопку прозрачной
                   inputElement.style.setProperty("--pcr-color", "transparent");
                 }
 
@@ -346,7 +333,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    // Обновление кнопок цвета с учетом класса, к которому они относятся
     const colorInputs = document.querySelectorAll(".input-color[data-id]");
     for (const input of colorInputs) {
       const dataClass = input.dataset.class || ":root";
@@ -448,7 +434,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleColorSchemeMeta(false);
 
     metaCheckbox.checked = false;
-    variablesOutput.textContent = ""; // Clear Prism
+    variablesOutput.textContent = "";
     Prism.highlightElement(variablesOutput);
   });
 
@@ -456,10 +442,8 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleColorSchemeMeta(this.checked);
   });
 
-  // hide unchanged
   let checkbox = document.querySelector('[data-id="show-changed"]');
   let sidebar = document.querySelector(".sidebar");
-  // let resetButton = document.querySelector('[data-id="resetButton"]');
 
   checkbox.addEventListener("change", function () {
     if (this.checked) {
@@ -469,28 +453,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Функция, которая проверяет, есть ли хотя бы один элемент .btn-show внутри .sidebar
   function checkBtnShow() {
     let btnShowExists = sidebar.querySelector(".btn-show") != null;
-
-    // Если есть, то чекбокс становится доступным, иначе - нет
     checkbox.disabled = !btnShowExists;
-
-    // Если есть элемент .btn-show, то мы добавляем класс .active к resetButton
     if (btnShowExists) {
       resetButton.classList.add("active");
     } else {
-      // Если нет элемента .btn-show, то мы убираем галку с чекбокса и удаляем класс .hide-unchanged и .active с resetButton
       checkbox.checked = false;
       sidebar.classList.remove("hide-unchanged");
       resetButton.classList.remove("active");
     }
   }
-
-  // Запускаем функцию при загрузке страницы
   checkBtnShow();
 
-  // И каждый раз, когда класс .btn-show добавляется или удаляется
   const btnShowObserver = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
       if (mutation.attributeName === "class") {
@@ -499,7 +474,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Наблюдаем только за элементами .reset-btn внутри .sidebar
   sidebar.querySelectorAll(".reset-btn").forEach((el) => {
     btnShowObserver.observe(el, {
       attributes: true,
@@ -507,24 +481,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // tabs
-
-
-// Удаляем активность со всех кнопок внутри одного блока табов
   const removeButtonActivityInTab = (tabElement) => {
     tabElement.querySelectorAll('.tab-button').forEach(button => {
       button.classList.remove('active-button');
     });
   };
 
-// Скрываем все контенты внутри одного блока табов
   const hideAllContentsInTab = (tabElement) => {
     tabElement.querySelectorAll('.tab-content').forEach(content => {
       content.classList.remove('active');
     });
   };
 
-// Скрываем все вкладки на странице
   const hideAllTabs = () => {
     document.querySelectorAll('.tabs').forEach(tab => {
       hideAllContentsInTab(tab);
@@ -532,7 +500,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-// Включаем события нажатия для всех кнопок
   document.querySelectorAll('.tab-button').forEach(button => {
     button.addEventListener('click', (event) => {
       event.preventDefault();
@@ -543,7 +510,6 @@ document.addEventListener("DOMContentLoaded", function () {
         targetContent.classList.remove('active');
         event.target.classList.remove('active-button');
       } else {
-        // hideAllTabs(); // скрываем все вкладки
         hideAllContentsInTab(parentTabElement);
         removeButtonActivityInTab(parentTabElement);
         targetContent.classList.add('active');
@@ -553,10 +519,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-// Начальное скрытие всех контентов и удаление активности кнопок
   hideAllTabs();
 
-// Сделать первую вкладку активной при загрузке страницы
   const firstTab = document.querySelector('.tabs');
   if (firstTab) {
     const firstButton = firstTab.querySelector('.tab-button');
