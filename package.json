@@ -1,6 +1,6 @@
 {
   "name": "cssformalize",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "CSSformalize is a groundbreaking CSS framework for effortless customization of native HTML forms. Fully customizable with CSS variables, requires no JavaScript.",
   "main": "css/css-formalize.css",
   "scripts": {
