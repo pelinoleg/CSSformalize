@@ -578,6 +578,15 @@ h1 {
   background: var(--demo-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  img {
+    height: 50px;
+    aspect-ratio: 1;
+    margin-right: 15px;
+    transform: translateY(3px);
+  }
   strong {
     font-weight: 400;
   }
@@ -1176,7 +1185,7 @@ code[class*=language-], pre[class*=language-] {
 
 .install-wrap {
   position: relative;
-  padding: 40px 60px 100px;
+  padding: 40px 40px 100px;
   overflow: hidden;
   display: flex;
   width: 50vw;
@@ -1220,11 +1229,23 @@ code[class*=language-], pre[class*=language-] {
   ol {
     margin: 35px auto 0 ;
     width: 70%;
+    min-width: 500px;
+    ul {
+      margin-left: 20px;
+      margin-bottom: 30px;
+      li {
+        font-size: 15px;
+        strong {
+          font-weight: 400
+        }
+      }
+    }
     li {
       margin-top: 15px;
       line-height: 20px;
       font-size: 16px;
       strong {
+        display: block;
         background: var(--demo-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

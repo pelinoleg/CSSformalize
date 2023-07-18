@@ -512,6 +512,15 @@ h1 {
   background: var(--demo-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+h1 img {
+  height: 50px;
+  aspect-ratio: 1;
+  margin-right: 15px;
+  transform: translateY(3px);
 }
 h1 strong {
   font-weight: 400;
@@ -1039,7 +1048,7 @@ code[class*=language-], pre[class*=language-] {
 
 .install-wrap {
   position: relative;
-  padding: 40px 60px 100px;
+  padding: 40px 40px 100px;
   overflow: hidden;
   display: flex;
   width: 50vw;
@@ -1082,6 +1091,17 @@ code[class*=language-], pre[class*=language-] {
 .install-wrap ol {
   margin: 35px auto 0;
   width: 70%;
+  min-width: 500px;
+}
+.install-wrap ol ul {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.install-wrap ol ul li {
+  font-size: 15px;
+}
+.install-wrap ol ul li strong {
+  font-weight: 400;
 }
 .install-wrap ol li {
   margin-top: 15px;
@@ -1089,6 +1109,7 @@ code[class*=language-], pre[class*=language-] {
   font-size: 16px;
 }
 .install-wrap ol li strong {
+  display: block;
   background: var(--demo-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

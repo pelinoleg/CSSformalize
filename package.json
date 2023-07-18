@@ -1,4 +1,34 @@
 {
+  "name": "cssformalize",
+  "version": "2.0.0",
+  "description": "CSSformalize is a groundbreaking CSS framework for effortless customization of native HTML forms. Fully customizable with CSS variables, requires no JavaScript.",
+  "main": "css/css-formalize.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CSS",
+    "HTML",
+    "Forms",
+    "Design",
+    "Customization",
+    "Framework",
+    "CSSformalize",
+    "Styling",
+    "Web Development",
+    "Frontend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pelinoleg/CSSformalize.git"
+  },
+  "author": {
+    "name": "Pelin Oleg",
+    "email": "pelinoleg.work@gmail.com",
+    "url": "https://cssformalize.com"
+  },
+  "homepage": "https://cssformalize.com",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",

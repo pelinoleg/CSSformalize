@@ -211,7 +211,7 @@
           <header>
             <div class="header-wrap">
               <div class="site-title">
-                <h1 class="title"><span>CSS</span><strong>formalize</strong></h1>
+                <h1 class="title"><img src="logo.svg" alt=""><span>CSS</span><strong>formalize</strong></h1>
                 <h2 class="">The Fast-Track to Stylish HTML Forms!</h2>
                 <div class="version">v 2.0</div>
                 <a href="generate.html" class="hbtn">
@@ -284,14 +284,40 @@
             <ol>
               <li><strong>Form Customization:</strong> Use our left sidebar to adjust global variables that define the overall appearance of your forms. In the central view, observe how your adjustments affect your forms and fine-tune the design further by customizing local variables unique to each form.</li>
               <li>
-                <strong>Style Integration:</strong> Incorporate the 'css-formalize.css' stylesheet into your project. You can download
-                it from our GitHub
-                <code>https://raw.githubusercontent.com/pelinoleg/CSSformalize/master/css/css-formalize.css</code>
-                or fetch it directly from the CDN <code>https://cdn.jsdelivr.net/gh/pelinoleg/CSSformalize@master/css/css-formalize.css</code>
-                <br />
-                minified: <code>https://cdn.jsdelivr.net/gh/pelinoleg/CSSformalize@master/css/css-formalize.min.css</code>
-                <br>
-                You can also install CSSformalize through npm using the following command: [command]
+                <strong>Installation:</strong>
+                You can install CSSformalize using npm by executing the following command in your command line:
+                <code>npm i cssformalize</code>
+              </li>
+              <li>
+                <strong>Integration using different methods:</strong>
+                <ul>
+
+                  <li>
+                    <strong>Importing in JavaScript or TypeScript file:</strong>
+
+                    If you're working with a module system like ES6 or TypeScript, you can import CSSformalize in your JS or TS files:
+                    <code>import 'cssformalize/css/css-formalize.css';</code>
+
+                  </li>
+                  <li>
+                    <strong>Importing in CSS or SCSS file:</strong>
+
+                    If you're using CSS preprocessors, you can import CSSformalize in your CSS or SCSS files:
+                    <code>@import 'cssformalize/css/css-formalize.css';</code>
+
+                  </li>
+                  <li><strong>Link tag integration:</strong>
+                    If your website is static or you are using a server that handles static files, you can include your CSS framework by adding the following link tag to the header of your HTML document:
+                    <code>&lt;link rel="stylesheet" href="node_modules/cssformalize/css/css-formalize.css"&gt;</code>
+
+                  </li>
+                  <li>
+                    <strong>CDN:</strong>
+                    you can use CDN link:
+                    <code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pelinoleg/CSSformalize@master/css/css-formalize.min.css"&gt;</code>
+
+                  </li>
+                </ul>
               </li>
               <li>
                 <strong>Variable Implementation: </strong> After linking the 'css-formalize.css' file, copy and paste the CSS variables generated during the customization process.
