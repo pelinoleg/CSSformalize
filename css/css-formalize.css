@@ -421,8 +421,8 @@ input[list]).invalid::placeholder {
      -moz-user-select: none;
           user-select: none;
   flex-shrink: 0;
-  height: clamp(22px, var(--cform-checkbox-width), 40px);
-  width: clamp(22px, var(--cform-checkbox-width), 40px);
+  height: clamp(16px, var(--cform-checkbox-width), 40px);
+  width: clamp(16px, var(--cform-checkbox-width), 40px);
   cursor: pointer;
   border-radius: clamp(0px, var(--cform-radius) - 2px, 8px);
   margin: 0;
@@ -453,8 +453,8 @@ input[list]).invalid::placeholder {
   border-left-width: clamp(2px, var(--cform-border-width), 3px);
   border-bottom-width: clamp(2px, var(--cform-border-width), 3px);
   position: absolute;
-  width: clamp(14px, var(--cform-checkbox-width) / 2, 28px);
-  height: clamp(9px, var(--cform-checkbox-width) / 4, 23px);
+  width: clamp(10px, var(--cform-checkbox-width) / 2, 28px);
+  height: clamp(6px, var(--cform-checkbox-width) / 4, 23px);
   top: 50%;
   left: 50%;
   transform: rotate(-50deg) translateY(-60%) translateX(-40%);
@@ -471,15 +471,15 @@ input[list]).invalid::placeholder {
 
 .cform[type=radio] {
   border-radius: 100%;
-  height: clamp(20px, var(--cform-checkbox-width) - 4px, 40px);
-  width: clamp(20px, var(--cform-checkbox-width) - 4px, 40px);
+  height: clamp(16px, var(--cform-checkbox-width) - 4px, 40px);
+  width: clamp(16px, var(--cform-checkbox-width) - 4px, 40px);
   position: relative;
 }
 .cform[type=radio]:before {
   transition: scale 0.25s ease-in-out;
   content: "";
-  height: clamp(10px, var(--cform-checkbox-width) - 16px, 15px);
-  width: clamp(10px, var(--cform-checkbox-width) - 16px, 15px);
+  height: clamp(8px, var(--cform-checkbox-width) - 16px, 15px);
+  width: clamp(8px, var(--cform-checkbox-width) - 16px, 15px);
   border-radius: 100%;
   background: var(--cform-accent-color);
   position: absolute;

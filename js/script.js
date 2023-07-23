@@ -541,4 +541,59 @@ document.addEventListener("DOMContentLoaded", function () {
   tippy('[data-tooltip="demo-bg"]', {
     content: 'Used only for emulate background color on your website',
   });
+
+
+  // sidebar togglers
+  const sidebars = [
+    {
+      toggles: document.getElementsByClassName('code_sidebar_toggle'),
+      element: document.getElementById('code_sidebar'),
+      activeClass: 'active-css-code-sidebar'
+    },
+    {
+      toggles: document.getElementsByClassName('left_sidebar_toggle'),
+      element: document.getElementById('left_sidebar'),
+      activeClass: 'active-left-sidebar'
+    }
+  ];
+
+  let activeSidebar = null;
+
+  function toggleSidebar(sidebar, event) {
+    event.stopPropagation();
+    const bodyClass = sidebar.activeClass;
+    const sidebarElement = sidebar.element;
+
+    if (sidebarElement.classList.contains('active')) {
+      sidebarElement.classList.remove('active');
+      document.body.classList.remove(bodyClass);
+      activeSidebar = null;
+    } else {
+      if (activeSidebar) {
+        activeSidebar.element.classList.remove('active');
+        document.body.classList.remove(activeSidebar.activeClass);
+      }
+      sidebarElement.classList.add('active');
+      document.body.classList.add(bodyClass);
+      activeSidebar = sidebar;
+    }
+  }
+
+  for (const sidebar of sidebars) {
+    for(let i = 0; i < sidebar.toggles.length; i++) {
+      sidebar.toggles[i].addEventListener('click', function(event) {
+        toggleSidebar(sidebar, event);
+      });
+    }
+  }
+
+  document.addEventListener('click', function() {
+    if (activeSidebar && !activeSidebar.element.contains(event.target)) {
+      activeSidebar.element.classList.remove('active');
+      document.body.classList.remove(activeSidebar.activeClass);
+      activeSidebar = null;
+    }
+  });
+
+
 });

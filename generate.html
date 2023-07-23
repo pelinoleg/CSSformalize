@@ -189,8 +189,9 @@
   </div>
 
     <div class="page">
-      <aside class="sidebar">
+      <aside id="left_sidebar" class="sidebar">
         <div class="sidebar-content">
+          <button class="left_sidebar_toggle"><i class="fa-solid fa-square-xmark"></i></button>
           <div class="sidebar-in custom-scroll">
             <div class="sidebar-title">Customize your form</div>
             <div class="sidebar-wrap custom-scroll">
@@ -404,6 +405,11 @@
             <div class="forms-wrap">
               <article class="customize-description">
                 <div class="home-link"><a href="./index.html">Return to Home Page</a></div>
+
+                <div class="sidebars-toggles">
+                  <button class="left_sidebar_toggle"><i class="fa-solid fa-chevron-left"></i><span>Show Main Settings</span></button>
+                  <button class="code_sidebar_toggle"><span>Show CSS Variables</span><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
 
                 <h2>Here you can generate styles for forms tailored to your project's design.</h2>
                 <br />
@@ -832,7 +838,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et mollitia, odio veri
                                 type="range"
                                 data-id="cFormCheckboxWidth"
                                 data-class=".cform-custom-checkbox-radio"
-                                min="6"
+                                min="16"
                                 max="45"
                                 value="26"
                                 class="cform"
@@ -936,7 +942,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et mollitia, odio veri
                                 type="range"
                                 data-id="cFormCheckboxWidth"
                                 data-class=".cform-custom-checkbox"
-                                min="6"
+                                min="16"
                                 max="35"
                                 value="26"
                                 class="cform"
@@ -1081,7 +1087,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et mollitia, odio veri
                                 type="range"
                                 data-id="cFormCheckboxWidth"
                                 data-class=".cform-custom-switch"
-                                min="6"
+                                min="20"
                                 max="35"
                                 value="26"
                                 class="cform"
@@ -1143,7 +1149,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et mollitia, odio veri
               <div class="form-wrap">
                 <div class="forms-item">
                   <span class="forms-item-title">Radio Group <span>/</span> Radio Group Small</span>
-                  <div class="forms-item-in">
+                  <div class="forms-item-in flex-wrap">
                     <div class="radio-group cform-radio-group">
                       <input type="radio" id="option-one" name="selector" checked />
                       <label for="option-one">Html</label>
@@ -1899,21 +1905,25 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et mollitia, odio veri
                 </div>
               </div>
             </div>
-            <div class="code-sidebar">
+            <div class="code-sidebar" id="code_sidebar">
+              <button class="code_sidebar_toggle"><i class="fa-solid fa-square-xmark"></i></button>
               <div class="code-sidebar-title">Copy Variables</div>
-              <div class="code-sidebar-desc">
-                Variables should be inserted after linking the main style file (css-formalize.css).
-              </div>
-              <div class="code-container">
-                <div class="code code-css">
-                  <pre><span class="code-title">/* CSS variables: */</span><code class="language-css"
-                                                                               data-id="variablesOutput"></code></pre>
+              <div class="code-sidebar-in">
+                <div class="code-sidebar-desc">
+                  Variables should be inserted after linking the main style file (css-formalize.css).
                 </div>
-                <div class="code code-html">
+                <div class="code-container">
+                  <div class="code code-css">
+                  <pre><span class="code-title">/* CSS variables: */</span><code class="language-css"
+                                                                                 data-id="variablesOutput"></code></pre>
+                  </div>
+                  <div class="code code-html">
                   <pre><span class="code-title">&lt;!-- Include in &lt;head&gt; if use dark theme: --&gt;
 </span><code class="language-html" data-id="metaOutput"></code></pre>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </main>
