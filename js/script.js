@@ -595,5 +595,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  window.addEventListener('resize', function() {
+    if (activeSidebar) {
+      activeSidebar.element.classList.remove('active');
+      document.body.classList.remove(activeSidebar.activeClass);
+      activeSidebar = null;
+    }
+  });
+
 
 });

@@ -34,9 +34,9 @@ body {
   background: #ebedf1;
 }
 
-.demo.active-css-code-sidebar,
-.demo.active-left-sidebar {
-  overflow: hidden;
+.active-css-code-sidebar .page-right,
+.active-left-sidebar .page-right {
+  overflow: hidden !important;
 }
 
 .circles {
