@@ -31,7 +31,6 @@ body {
 .demo {
   padding: 0;
   margin: 0;
-  background: #ebedf1;
 }
 
 .active-css-code-sidebar .page-right,
@@ -504,6 +503,8 @@ nav .support a:hover {
   position: relative;
   display: flex;
   height: 100dvh;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .page .page-right {
   overflow: auto;
@@ -1401,5 +1402,17 @@ pre[class*=language-] {
 @media screen and (max-width: 500px) {
   .customize-container {
     flex-direction: column;
+  }
+}
+@media screen and (orientation: portrait) and (max-width: 768px) {
+  .circle-1 {
+    top: -5vh;
+    left: -80vw;
+    width: 110vw;
+  }
+  .circle-2 {
+    width: 120vw;
+    top: auto;
+    bottom: -15vh;
   }
 }
