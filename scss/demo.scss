@@ -39,10 +39,10 @@ body {
   //height: 100vh;
 }
 
-.demo.active-css-code-sidebar .page-right,
-.demo.active-left-sidebar .page-right {
+.active-css-code-sidebar .page-right,
+.active-left-sidebar .page-right {
   //max-height: 100dvh;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .circles {
