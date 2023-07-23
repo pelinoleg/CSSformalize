@@ -4,6 +4,10 @@
   --demo-boxs-shadow: 1.4px 1.7px 1.8px rgba(0, 0, 0, 0.005), 3.1px 3.9px 4px rgba(0, 0, 0, 0.007),
     5.4px 6.8px 7px rgba(0, 0, 0, 0.009), 8.6px 10.8px 11.1px rgba(0, 0, 0, 0.01), 13.3px 16.6px 17.2px rgba(0, 0, 0, 0.011),
     20.8px 25.9px 26.8px rgba(0, 0, 0, 0.013), 34.5px 43px 44.5px rgba(0, 0, 0, 0.015), 69px 86px 89px rgba(0, 0, 0, 0.02);
+  --demo-boxs-shadow-2: -1.4px 1.7px 1.8px rgba(0, 0, 0, 0.005), -3.1px 3.9px 4px rgba(0, 0, 0, 0.007),
+  -5.4px 6.8px 7px rgba(0, 0, 0, 0.009), -8.6px 10.8px 11.1px rgba(0, 0, 0, 0.01), -13.3px 16.6px 17.2px rgba(0, 0, 0, 0.011),
+  -20.8px 25.9px 26.8px rgba(0, 0, 0, 0.013), -34.5px 43px 44.5px rgba(0, 0, 0, 0.015), -69px 86px 89px rgba(0, 0, 0, 0.02);
+
   --demo-gradient: linear-gradient(120deg, #fe0986 0%, #a219d8 100%);
   --demo-gradient-2: linear-gradient(120deg, #09f6fe 0%, #24be7d 100%);
   --demo-text-color: rgba(71, 85, 105, 0.77);
@@ -37,7 +41,7 @@ body {
 
 .demo.active-css-code-sidebar,
 .demo.active-left-sidebar {
-  max-height: 100dvh;
+  //max-height: 100dvh;
   overflow: hidden;
 }
 
@@ -1246,7 +1250,7 @@ pre[class*="language-"] {
     background: var(--demo-gradient);
     color: #fff;
     border: unset;
-    padding: 7px 10px;
+    padding: 10px 10px;
     border-radius: 10px;
     display: none;
     gap: 8px;
@@ -1406,7 +1410,7 @@ pre[class*="language-"] {
     transition: 0.6s ease-in-out;
     z-index: 10;
     //overflow: auto;
-    box-shadow: var(--demo-boxs-shadow);
+    box-shadow: var(--demo-boxs-shadow-2);
     &.active {
       right: 0
     }

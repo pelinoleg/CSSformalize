@@ -3,7 +3,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/stargazers)
 
 
-# CSSformalize v2.0.1
+# CSSformalize v2.0.2
 ### The Fast-Track to Stylish HTML Forms!
 
 For a live demo, visit [cssformalize.com](http://cssformalize.com). Happy designing!
