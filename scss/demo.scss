@@ -1559,6 +1559,17 @@ pre[class*="language-"] {
   }
 }
 
+@media (pointer: coarse) {
+  .sidebar-option ::-webkit-slider-thumb {
+    --cform-checkbox-width: 26px;
+    margin-top: -2px !important;
+  }
+  .input-color {
+    height: 20px
+  }
+}
+
+
 
 
 
