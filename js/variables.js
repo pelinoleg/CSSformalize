@@ -1,5 +1,6 @@
 const root = document.documentElement;
 const variablesOutput = document.querySelector('[data-id="variablesOutput"]');
+const themeDefault = document.querySelector('[data-id="themeDefault"]');
 const themeButton = document.querySelector('[data-id="themeButton"]');
 const themeButton2 = document.querySelector('[data-id="themeButton2"]');
 const themeButton3 = document.querySelector('[data-id="themeButton3"]');
@@ -334,9 +335,9 @@ const themes = {
       "--cform-accent": "rgba(71, 85, 105, 1)"
     },
     ".cform-custom-btn": {
-      "--cform-btn-default": "rgba(209, 213, 219, 1)",
-      "--cform-btn-default-text": "rgba(71, 85, 105, 1)",
-      "--cform-radius": "7px",
+      "--cform-btn-default": "rgba(168, 173, 179, 1)",
+      "--cform-btn-default-text": "rgba(255, 255, 255, 1)",
+      "--cform-radius": "45px",
       "--cform-btn-primary": "rgba(108, 159, 230, 1)"
     },
     ".cform-custom-file": {

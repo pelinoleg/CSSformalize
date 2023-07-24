@@ -395,10 +395,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  themeDefault.addEventListener("click", () => {
+    setTheme("default");
+    toggleColorSchemeMeta(false);
+    metaCheckbox.checked = false;
+  });
 
   themeButton.addEventListener("click", () => {
     setTheme("theme");
-
     toggleColorSchemeMeta(true);
     metaCheckbox.checked = true;
   });

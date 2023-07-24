@@ -111,10 +111,11 @@ body {
 }
 .code-sidebar {
   flex-basis: 350px;
+  max-width: 350px;
   max-height: 100svh;
   //overflow: auto;
-  //position: sticky;
-  //top: 0;
+  position: sticky;
+  top: 0;
   padding-top: 20px;
   flex-shrink: 0;
   .code-sidebar-in {
@@ -981,6 +982,7 @@ pre[class*="language-"] {
       border-radius: calc(var(--demo-border-radius) / 2);
       cursor: pointer;
       transition: background 0.1s ease;
+      white-space: nowrap;
       &:hover {
         background: rgba(#fff, 0.7);
       }
@@ -1308,6 +1310,7 @@ pre[class*="language-"] {
   .sidebar,
   .code-sidebar {
     flex-basis: 300px;
+    max-width: 300px;
   }
 }
 
@@ -1329,7 +1332,12 @@ pre[class*="language-"] {
 @media screen and (max-width: 800px) {
   header {
     .header-content {
-      width: 100%;
+      width: 95%;
+      margin-top: 20px;
+      .description {
+        font-size: 16px;
+      }
+
       .keys,
       ul {
         width: 90%;
@@ -1367,7 +1375,7 @@ pre[class*="language-"] {
   .home-page {
     .install-wrap {
       width: 90%;
-      padding: 20px 20px 100px;
+      padding: 20px 20px 50px;
       .install-description {
         margin-top: 20px;
         span {
@@ -1483,12 +1491,28 @@ pre[class*="language-"] {
 }
 
 @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 38px;
+    img {
+      height: 36px;
+    }
+  }
+  .demo {
+    height: auto;
+    min-height: 100dvh;
+    overflow: auto;
+  }
+  .page .page-right {
+    overflow: visible;
+  }
   .main-content {
     padding-left: 0;
     padding-right: 0;
   }
   .forms-wrap {
     margin: 0 10px;
+    gap: 20px;
+    padding-bottom: 50px;
   }
   .forms-item {
     padding: 10px;
@@ -1511,6 +1535,14 @@ pre[class*="language-"] {
   .customize-container {
     flex-direction: column;
   }
+  .customize-container .customize-container-in {
+    max-width: 100%
+  }
+
+  .customize-description {
+    padding: 10px 10px 0
+  }
+
 }
 
 
