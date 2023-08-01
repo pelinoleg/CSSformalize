@@ -51,6 +51,10 @@ body {
   position: absolute;
 }
 
+.forms-item .cform {
+  transition: all 0.3s linear !important;
+}
+
 .sidebar {
   --cform-checkbox-width: 20px;
   --cform-accent-color: #fff;
