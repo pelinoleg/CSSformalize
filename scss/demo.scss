@@ -51,8 +51,17 @@ body {
   position: absolute;
 }
 
-.forms-item .cform {
-  transition: all 0.3s linear !important;
+.forms-item {
+  .cform,
+  .cform-btn,
+  .cform-radio-group,
+  .cform-switch {
+    transition: all 0.3s linear !important;
+    * {
+      transition: all 0.3s linear !important;
+    }
+  }
+
 }
 
 .sidebar {

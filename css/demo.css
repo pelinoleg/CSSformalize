@@ -49,7 +49,16 @@ body {
   position: absolute;
 }
 
-.forms-item .cform {
+.forms-item .cform,
+.forms-item .cform-btn,
+.forms-item .cform-radio-group,
+.forms-item .cform-switch {
+  transition: all 0.3s linear !important;
+}
+.forms-item .cform *,
+.forms-item .cform-btn *,
+.forms-item .cform-radio-group *,
+.forms-item .cform-switch * {
   transition: all 0.3s linear !important;
 }
 
