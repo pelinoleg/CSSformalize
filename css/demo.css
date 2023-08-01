@@ -109,6 +109,7 @@ body {
   flex-basis: 350px;
   max-width: 350px;
   max-height: 100svh;
+  overflow: auto;
   position: sticky;
   top: 0;
   padding-top: 20px;
