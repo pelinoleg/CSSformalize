@@ -93,11 +93,15 @@ body {
   //--cform-accent-color: #fffefd;
 }
 .customize-description {
-  padding: 20px 20px 0px;
+  padding: 20px 20px 20px;
   text-wrap: balance;
+  margin-top: 20px;
   font-size: 18px;
   color: var(--demo-text-color);
   text-align: center;
+  background-color: rgba(#fff, 0.35);
+  border-radius: var(--demo-border-radius);
+  border: 1px solid rgba(#fff, 0.35);
   .home-link {
     text-align: left;
   }
@@ -392,7 +396,7 @@ h2 {
 .forms-wrap {
   flex: 1 1 0;
   display: flex;
-  gap: 40px;
+  gap: 20px;
   padding-bottom: 100px;
   flex-direction: column;
 }
