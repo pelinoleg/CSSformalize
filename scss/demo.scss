@@ -209,7 +209,9 @@ body {
   .sidebar-content {
     overflow: hidden;
     padding: 10px;
-    background: rgba(#fff, 0.5);
+    background: rgba(#302a33, 0.07);
+    //border: 1px solid rgba(#fff, 0.5);
+    //box-shadow: inset 1px 1px 3px rgba(#000, 0.05), 1px 1px 1px rgba(#fff, 0.1);
     flex: 1;
     backdrop-filter: blur(50px);
     position: relative;
@@ -940,8 +942,10 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"] {
-  background: rgba(#fff, 0.5) !important;
-  backdrop-filter: blur(20px);
+  //background: rgba(#fff, 0.5) !important;
+  background: rgba(#302a33, 0.07) !important;
+  //backdrop-filter: blur(20px);
+
 }
 code[class*="language-"],
 pre[class*="language-"] {
@@ -1583,6 +1587,47 @@ pre[class*="language-"] {
   }
 }
 
+
+.generate-area2 {
+  background: linear-gradient(-112deg, #281e3c 0%, #4b3452 100%);
+
+  .sidebar {
+    //padding-right: 0;
+  }
+  .form-wrap {
+    //background-color: #fbebee;
+    border-radius: 0
+  }
+  .code-toolbar {
+    pre[class*=language-] {
+      background: linear-gradient(-25deg, rgba(#fae3e7, 0.1) 0%, #4b3452 60%) !important;
+    }
+  }
+  .sidebar .sidebar-content {
+    background-color: transparent;
+    border-top-right-radius: 0;
+     .sidebar-option {
+       background: linear-gradient(-25deg, rgba(#fae3e7, 0.1) 0%, #4b3452 60%);
+       border-radius: 10px;
+       padding: 10px;
+       border: unset;
+       grid-template-rows: 16px 22px;
+       * {
+         color: #fff !important;
+       }
+     }
+  }
+  .forms-wrap {
+    background: linear-gradient(-85deg, rgba(#fae3e7, 0.1) 0%, rgba(#fdeef1, 0.1) 100%);
+    margin: 20px 0;
+    border-radius: 20px;
+    //padding: 20px
+  }
+
+  .customize-description * {
+    color: #fff !important;
+  }
+}
 
 
 

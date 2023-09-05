@@ -1,6 +1,6 @@
+[![GitHub stars](https://img.shields.io/github/stars/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/network)
 [![GitHub issues](https://img.shields.io/github/issues/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/issues)
-[![GitHub stars](https://img.shields.io/github/stars/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/stargazers)
 
 
 # CSSformalize v2.0.2

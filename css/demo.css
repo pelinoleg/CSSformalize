@@ -201,7 +201,7 @@ body {
 .sidebar .sidebar-content {
   overflow: hidden;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(48, 42, 51, 0.07);
   flex: 1;
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
@@ -872,9 +872,7 @@ pre[class*=language-] {
 }
 
 pre[class*=language-] {
-  background: rgba(255, 255, 255, 0.5) !important;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  background: rgba(48, 42, 51, 0.07) !important;
 }
 
 code[class*=language-],
@@ -1471,4 +1469,35 @@ pre[class*=language-] {
   .input-color {
     height: 20px;
   }
+}
+.generate-area2 {
+  background: linear-gradient(-112deg, #281e3c 0%, #4b3452 100%);
+}
+.generate-area2 .form-wrap {
+  border-radius: 0;
+}
+.generate-area2 .code-toolbar pre[class*=language-] {
+  background: linear-gradient(-25deg, rgba(250, 227, 231, 0.1) 0%, #4b3452 60%) !important;
+}
+.generate-area2 .sidebar .sidebar-content {
+  background-color: transparent;
+  border-top-right-radius: 0;
+}
+.generate-area2 .sidebar .sidebar-content .sidebar-option {
+  background: linear-gradient(-25deg, rgba(250, 227, 231, 0.1) 0%, #4b3452 60%);
+  border-radius: 10px;
+  padding: 10px;
+  border: unset;
+  grid-template-rows: 16px 22px;
+}
+.generate-area2 .sidebar .sidebar-content .sidebar-option * {
+  color: #fff !important;
+}
+.generate-area2 .forms-wrap {
+  background: linear-gradient(-85deg, rgba(250, 227, 231, 0.1) 0%, rgba(253, 238, 241, 0.1) 100%);
+  margin: 20px 0;
+  border-radius: 20px;
+}
+.generate-area2 .customize-description * {
+  color: #fff !important;
 }
