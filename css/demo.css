@@ -715,14 +715,14 @@ pre[class*=language-] {
 }
 
 .circle-1 {
-  position: absolute;
+  position: fixed;
   top: -25vh;
   left: -25vw;
   width: 65vw;
 }
 
 .circle-2 {
-  position: absolute;
+  position: fixed;
   bottom: -10vh;
   right: clamp(-300px, -25vw, -500px);
   width: 66vw;
