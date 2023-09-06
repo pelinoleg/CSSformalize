@@ -275,6 +275,7 @@ header {
   flex-direction: column;
   justify-content: center;
   background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--demo-border-radius);
   box-shadow: var(--demo-box-shadow);
   -webkit-backdrop-filter: blur(20px);
@@ -727,9 +728,9 @@ pre[class*=language-] {
 
 .circle-2 {
   position: absolute;
-  top: -10vh;
+  bottom: -10vh;
   right: clamp(-300px, -25vw, -500px);
-  width: 56vw;
+  width: 66vw;
 }
 
 .sidebar-title {
@@ -1098,6 +1099,7 @@ pre[class*=language-] {
   background: rgba(255, 255, 255, 0.5);
   color: var(--demo-text-color);
   margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--demo-border-radius);
   box-shadow: var(--demo-box-shadow);
   -webkit-backdrop-filter: blur(20px);
@@ -1461,7 +1463,6 @@ pre[class*=language-] {
   }
   .circle-2 {
     width: 120vw;
-    top: auto;
     bottom: -15vh;
   }
 }

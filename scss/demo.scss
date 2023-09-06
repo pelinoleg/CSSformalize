@@ -294,7 +294,7 @@ header {
   justify-content: center;
   background: rgba(#fff, 0.5);
 
-  //border: 1px dashed #ccc;
+  border: 1px solid rgba(#fff, 0.3);
   border-radius: var(--demo-border-radius);
   box-shadow: var(--demo-box-shadow);
   //margin-bottom: 30px;
@@ -775,9 +775,9 @@ pre[class*="language-"] {
 
 .circle-2 {
   position: absolute;
-  top: -10vh;
+  bottom: -10vh;
   right: clamp(-300px, -25vw, -500px);
-  width: 56vw;
+  width: 66vw;
   //filter: hue-rotate(-40deg);
 }
 
@@ -1191,6 +1191,7 @@ pre[class*="language-"] {
   color: var(--demo-text-color);
   margin: 0 auto;
   //border: 1px dashed #ccc;
+  border: 1px solid rgba(#fff, 0.3);
   border-radius: var(--demo-border-radius);
   box-shadow: var(--demo-box-shadow);
   //margin-bottom: 30px;
@@ -1576,7 +1577,7 @@ pre[class*="language-"] {
   }
   .circle-2 {
     width: 120vw;
-    top: auto;
+    //top: auto;
     bottom: -15vh
   }
 }
