@@ -1,7 +1,6 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/pelinoleg/CSSformalize?style=for-the-badge&color=%23ea3f88)
+![GitHub forks](https://img.shields.io/github/forks/pelinoleg/CSSformalize?style=for-the-badge&color=%23ea3f88)
 
-[![GitHub forks](https://img.shields.io/github/forks/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/network)
-[![GitHub issues](https://img.shields.io/github/issues/pelinoleg/CSSformalize.svg)](https://github.com/pelinoleg/CSSformalize/issues)
 
 
 # CSSformalize v2.0.2
