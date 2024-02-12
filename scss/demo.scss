@@ -589,6 +589,7 @@ nav {
   display: flex;
   gap: 20px;
   padding-right: 20px;
+  max-width: 800px
 }
 
 main {
@@ -799,7 +800,14 @@ pre[class*="language-"] {
   color: var(--demo-text-color);
   padding-left: 10px;
   filter: brightness(50%);
-  //background: #fff
+  &:has(.sidebar-subtitle) {
+    height: 68px
+  }
+}
+
+.sidebar-subtitle {
+  font-size: 16px;
+  margin-top: 6px
 }
 .sidebar-option {
   //transition: all 0.3s ease;

@@ -543,7 +543,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // tooltips
   tippy('[data-tooltip="demo-bg"]', {
-    content: 'Used only for emulate background color on your website',
+    content: 'Used only for emulate background color from your website',
   });
 
 
