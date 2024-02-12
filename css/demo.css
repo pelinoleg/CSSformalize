@@ -500,6 +500,9 @@ nav .links .link-item {
   gap: 15px;
   align-items: center;
 }
+nav .links .link-item.github-repo-stars img {
+  border-radius: 5px;
+}
 nav .links .link-item a {
   background: var(--demo-gradient);
   -webkit-background-clip: text;

@@ -530,6 +530,9 @@ nav {
       gap: 15px;
       align-items: center;
       //color: rgba(#000, 0.8);
+      &.github-repo-stars img {
+        border-radius: 5px;
+      }
       a {
         background: var(--demo-gradient);
         -webkit-background-clip: text;
