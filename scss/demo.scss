@@ -1390,6 +1390,9 @@ pre[class*="language-"] {
           a {
             font-size: 20px;
           }
+          &:last-child {
+            display: none
+          }
         }
       }
     }

@@ -1287,6 +1287,10 @@ pre[class*=language-] {
   header nav .links .link-item a {
     font-size: 20px;
   }
+  header nav .support .link-item:last-child,
+  header nav .links .link-item:last-child {
+    display: none;
+  }
   h1 {
     font-size: 44px;
   }

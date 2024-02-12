@@ -66,7 +66,7 @@ input[list]) {
           appearance: none;
   border: unset;
   font-size: clamp(12px, var(--cform-font-size), 20px);
-  min-height: clamp(10px, var(--cform-font-size), 60px);
+  min-height: clamp(10px, (var(--cform-font-size)), 60px);
   border-radius: var(--cform-radius);
   padding: var(--cform-padding) calc(var(--cform-padding) * 3);
   padding-block: clamp(1px, var(--cform-padding) * 2.5, 15px);
@@ -559,7 +559,7 @@ input[list]).invalid::placeholder {
   border-radius: var(--cform-radius);
   overflow: hidden;
   background: var(--cform-bg);
-  padding: clamp(3px, var(--cform-padding), 8px);
+  padding: clamp(3px, (var(--cform-padding)), 8px);
   display: inline-flex !important;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -594,7 +594,7 @@ input[list]).invalid::placeholder {
   padding: clamp(3px, var(--cform-padding) - 1px, 6px);
 }
 .radio-group.radio-group-small label {
-  padding-block: clamp(3px, var(--cform-padding), 5px);
+  padding-block: clamp(3px, (var(--cform-padding)), 5px);
   padding-inline: clamp(10px, var(--cform-padding) + 10px, 15px);
   font-size: clamp(12px, var(--cform-font-size) - 3px, 18px);
 }
@@ -784,8 +784,8 @@ input[type=color].cform {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  inline-size: clamp(20px, var(--cform-checkbox-width), 55px);
-  block-size: clamp(20px, var(--cform-checkbox-width), 55px);
+  inline-size: clamp(20px, (var(--cform-checkbox-width)), 55px);
+  block-size: clamp(20px, (var(--cform-checkbox-width)), 55px);
 }
 input[type=color].cform::-webkit-color-swatch-wrapper {
   padding: 0;
