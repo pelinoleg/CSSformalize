@@ -10,10 +10,10 @@ const sourcemaps = require('gulp-sourcemaps');
 function sassTask() {
 	return src('./scss/*.scss')
 		// .pipe(plumber())
-		// .pipe(sourcemaps.init()) // Инициализация source map
+		// .pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
-		// .pipe(sourcemaps.write('.')) // Запись source map
+		// .pipe(sourcemaps.write('.'))
 		.pipe(dest(`./css`));
 }
 
