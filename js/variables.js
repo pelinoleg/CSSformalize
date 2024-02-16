@@ -6,6 +6,8 @@ const themeButton2 = document.querySelector('[data-id="themeButton2"]');
 const themeButton3 = document.querySelector('[data-id="themeButton3"]');
 const themeButton4 = document.querySelector('[data-id="themeButton4"]');
 const themeButton5 = document.querySelector('[data-id="themeButton5"]');
+const themeButton6 = document.querySelector('[data-id="themeButton6"]');
+const themeButton7 = document.querySelector('[data-id="themeButton7"]');
 const resetButton = document.querySelector('[data-id="resetButton"]');
 const metaCheckbox = document.querySelector('[data-id="meta"]');
 const metaOutput = document.querySelector('[data-id="metaOutput"]');
@@ -348,7 +350,69 @@ const themes = {
       "--cform-radius": "9px"
     }
 
+  },
+  theme6: {
+    ":root": {
+      "--demo-bg": "#2a3238",
+      "--cform-radius": "9px",
+      "--cform-font-size": "14px",
+      "--cform-border-width-focus": "2px",
+      "--cform-focus-bg": "rgba(83, 103, 115, 1)",
+      "--cform-border-focus-color": "rgba(143, 200, 196, 1)",
+      "--cform-bg": "rgba(83, 103, 115, 1)",
+      "--cform-text-color": "rgba(174, 223, 219, 1)",
+      "--cform-accent": "rgba(143, 195, 191, 1)",
+      "--cform-border-color": "rgba(143, 200, 196, 1)"
+    },
+    ".cform-custom-input": {
+      "--cform-text-placeholder-color": "rgba(162, 213, 210, 0.66)",
+      "--cform-legend": "rgba(143, 200, 196, 1)"
+    },
+    ".cform-custom-switch": {
+      "--cform-text-placeholder-color": "rgba(119, 141, 155, 1)",
+      "--cform-radius": "20px"
+    },
+    ".cform-radio-group": {
+      "--cform-radius": "8px",
+      "--cform-accent-color": "rgba(43, 50, 56, 1)"
+    },
+    ".cform-custom-btn": {
+      "--cform-btn-default-text": "rgba(203, 218, 226, 1)",
+      "--cform-radius": "10px",
+      "--cform-btn-primary": "rgba(123, 177, 135, 1)"
+    }
+  },
+
+  theme7: {
+    ":root": {
+      "--demo-bg": "#e6e9eb",
+      "--cform-border-focus-color": "rgba(168, 197, 205, 1)",
+      "--cform-bg": "rgba(255, 255, 255, 1)",
+      "--cform-text-color": "rgba(127, 154, 161, 1)",
+      "--cform-accent": "rgba(20, 184, 166, 1)",
+      "--cform-border-color": "rgba(168, 197, 205, 1)"
+    },
+    ".cform-custom-input": {
+      "--cform-text-placeholder-color": "rgba(127, 154, 161, 0.82)",
+      "--cform-legend": "rgba(96, 118, 124, 1)"
+    },
+    ".cform-custom-switch": {
+      "--cform-bg": "rgba(168, 197, 205, 0.22)",
+      "--cform-text-placeholder-color": "rgba(255, 255, 255, 1)",
+      "--cform-radius": "20px"
+    },
+    ".cform-custom-range": {
+      "--cform-border-width": "0px",
+      "--cform-radius": "29px",
+      "--cform-checkbox-width": "27px"
+    },
+    ".cform-custom-btn": {
+      "--cform-btn-default-text": "rgba(130, 153, 160, 1)",
+      "--cform-btn-primary": "rgba(130, 153, 160, 1)"
+    }
   }
+
+
 };
 
 let swatches = [

@@ -426,6 +426,16 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleColorSchemeMeta(false);
     metaCheckbox.checked = false;
   });
+  themeButton6.addEventListener("click", () => {
+    setTheme("theme6");
+    toggleColorSchemeMeta(true);
+    metaCheckbox.checked = true;
+  });
+  themeButton7.addEventListener("click", () => {
+    setTheme("theme7");
+    toggleColorSchemeMeta(false);
+    metaCheckbox.checked = false;
+  });
 
   resetButton.addEventListener("click", () => {
     Object.entries(cssVariables).forEach(([id]) => {
